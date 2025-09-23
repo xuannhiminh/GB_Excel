@@ -7,7 +7,7 @@
         android:shortcutLongLabel="@string/uninstall">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.pdf.pdfreader.pdfviewer.editor"
-            android:targetClass="com.pdf.pdfreader.pdfviewer.editor.screen.uninstall.UninstallActivity" />
+            android:targetPackage="com.xlsx.reader.spread.sheets.viewer.editor"
+            android:targetClass="com.xlsx.reader.spread.sheets.viewer.editor.screen.uninstall.UninstallActivity" />
     </shortcut>
 </shortcuts>

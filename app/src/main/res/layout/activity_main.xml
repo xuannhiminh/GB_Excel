@@ -14,7 +14,7 @@
         android:id="@+id/main_layout"
         tools:context=".screen.main.MainActivity">
 
-    <com.pdf.pdfreader.pdfviewer.editor.view.NonSwipeViewPager
+    <com.xlsx.reader.spread.sheets.viewer.editor.view.NonSwipeViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_marginTop="8dp"

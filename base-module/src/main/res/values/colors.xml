@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primaryColor">#FF1F44</color>
+    <color name="primaryColor">#008000</color>
     <color name="iapColor">#FF1F44</color>
     <color name="text1">#040516</color>
     <color name="text2">#8C8DAF</color>
