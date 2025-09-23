@@ -49,9 +49,7 @@ class SelectMultipleFilesActivity : PdfBaseActivity<ActivityCheckFileBinding>() 
     override fun onStart() {
         super.onStart()
         loadNativeNomedia()
-        if (TemporaryStorage.isLoadAds) {
-            loadNativeAdsMiddleFiles()
-        }
+        loadNativeAdsMiddleFiles()
     }
 
     override fun onStop() {

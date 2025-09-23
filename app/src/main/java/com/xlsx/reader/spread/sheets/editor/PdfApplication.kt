@@ -90,7 +90,7 @@ class PdfApplication: MyLibApplication() {
             }
         FirebaseFirestore.getInstance()
         NotificationManager(this).createNotificationChannel()
-        val testDeviceIds = listOf("772B2E85D9A498676884AA26D2E687E7","7BF8EBE42FEB24B9C0231207C37B53FD") // replace with your real test ID
+        val testDeviceIds = getListTestDeviceId() // replace with your real test ID
         val configuration = RequestConfiguration.Builder()
             .setTestDeviceIds(testDeviceIds)
             .build()
@@ -111,7 +111,7 @@ class PdfApplication: MyLibApplication() {
 
     override fun getListTestDeviceId(): MutableList<String>? {
         return listOf("9C9F13F96407265FD1AD8B7217DFBB4F", "19CF3EF910710E71DA25CC42219EC340", "21EA4B3FCEDFE792A5CE1655F1B92B1F", "6877F63B09F390A8A9C2FBF6C0A89106",
-            "DB2BB2022DEE9BB6351662532A8F6F05","7BF8EBE42FEB24B9C0231207C37B53FD", "87BCCFEB97F85D17C4D63F0257B0CBE5") as MutableList<String>?
+            "DB2BB2022DEE9BB6351662532A8F6F05","7BF8EBE42FEB24B9C0231207C37B53FD", "87BCCFEB97F85D17C4D63F0257B0CBE5","927F922EDD0A2745773762A0363B0D96") as MutableList<String>?
     }
 
     override fun getResumeAdId(): String {
