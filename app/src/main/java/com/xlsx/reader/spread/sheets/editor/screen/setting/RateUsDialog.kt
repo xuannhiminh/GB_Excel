@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,9 @@ import androidx.fragment.app.DialogFragment
 import com.ezteam.baseproject.animation.AnimationUtils
 import com.ezteam.baseproject.utils.PreferencesUtils
 import com.ezteam.baseproject.utils.TemporaryStorage
+import com.google.android.play.core.review.ReviewException
+import com.google.android.play.core.review.ReviewManagerFactory
+import com.google.android.play.core.review.model.ReviewErrorCode
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.xlsx.reader.spread.sheets.viewer.editor.R
 import com.xlsx.reader.spread.sheets.viewer.editor.databinding.RateUsDialogBinding
@@ -66,16 +70,42 @@ class RateUsDialog : DialogFragment() {
             logEvent(firebaseAnalytics, "selected_rating_${selectedRating}")
             if (selectedRating < 5) {
                 FeedBackActivity.start(requireActivity())
+                dismiss()
             }  else {
                 PreferencesUtils.putBoolean("SHOW_SATISFIED_DIALOG", false)
                 TemporaryStorage.isRateFullStar = true
-                val intent = Intent(Intent.ACTION_VIEW).apply {
-                    data = Uri.parse("market://details?id=${requireContext().packageName}")
-                }
-                startActivity(intent)
+                launchInAppReview()
             }
-
+        }
+    }
+    private fun launchInAppReview() {
+        val manager = ReviewManagerFactory.create(requireContext())
+        val request = manager.requestReviewFlow()
+        request.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                // We got the ReviewInfo object
+                val reviewInfo = task.result
+                val flow = manager.launchReviewFlow(requireActivity(), reviewInfo)
+                flow.addOnCompleteListener { _ ->
+                    showSuccessDialog()
+                    Log.d("RateUsDialog", "launchInAppReview: success")
+                }
+            } else {
+                showSuccessDialog()
+                @ReviewErrorCode val reviewErrorCode = (task.getException() as ReviewException).errorCode
+                Log.d("RateUsDialog", "launchInAppReview: error")
+            }
+        }
+    }
+    private fun showSuccessDialog() {
+        val dialog = FeedBackSucessDialog()
+        dialog.listener = {
             dismiss()
+        }
+        try {
+            dialog.show(this.parentFragmentManager, "FeedBackSucessDialog")
+        } catch (e: Exception) {
+            Log.e("DefaultReaderRequestDialog", "Error showing FeedBackSucessDialog: ${e.message}")
         }
     }
 
@@ -138,7 +168,7 @@ class RateUsDialog : DialogFragment() {
             }
             5 -> {
                 binding.emojiHeader.text = "🥰"
-                updateTexts(R.string.much_appreciated, R.string.your_support_is_motivation, R.string.rate_on_google)
+                updateTexts(R.string.much_appreciated, R.string.your_support_is_motivation, R.string.rate)
             }
         }
     }

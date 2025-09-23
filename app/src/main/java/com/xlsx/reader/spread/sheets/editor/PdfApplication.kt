@@ -26,6 +26,8 @@ import com.ezteam.baseproject.di.baseModule
 import com.ezteam.baseproject.utils.IAPUtils
 import com.ezteam.baseproject.utils.PreferencesUtils
 import com.facebook.ads.AdSettings
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.RequestConfiguration
 import com.google.firebase.FirebaseApp
 import com.google.firebase.appcheck.FirebaseAppCheck
 import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory
@@ -88,6 +90,12 @@ class PdfApplication: MyLibApplication() {
             }
         FirebaseFirestore.getInstance()
         NotificationManager(this).createNotificationChannel()
+        val testDeviceIds = listOf("772B2E85D9A498676884AA26D2E687E7","7BF8EBE42FEB24B9C0231207C37B53FD") // replace with your real test ID
+        val configuration = RequestConfiguration.Builder()
+            .setTestDeviceIds(testDeviceIds)
+            .build()
+
+        MobileAds.setRequestConfiguration(configuration)
         applyAdMobAPI35WorkaroundIfNeeded(this)
         AdSettings.addTestDevice("f8fb2c9d-1e1b-4f6d-b9c9-2f955bb05c2c")
         AdSettings.addTestDevice("2aa3aa2c-8872-40db-bb15-05c9a3b80a85")

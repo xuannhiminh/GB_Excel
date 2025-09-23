@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="primaryColor">#008000</color>
-    <color name="iapColor">#FF1F44</color>
+    <color name="iapColor">#008000</color>
     <color name="text2">#8C8DAF</color>
+    <color name="text1">#ebebeb</color>
     <color name="element">#262626</color>
     <color name="negative">#2c2d30</color>
 

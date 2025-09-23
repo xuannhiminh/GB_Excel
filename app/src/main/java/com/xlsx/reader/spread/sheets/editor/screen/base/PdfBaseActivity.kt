@@ -314,7 +314,7 @@ abstract class PdfBaseActivity<B : ViewBinding> : BaseActivity<B>(), IControl {
 
     override fun openAppOnStore() {
         val intent = Intent(Intent.ACTION_VIEW)
-        intent.data = Uri.parse("https://play.google.com/store/apps/details?id=$packageName")
+//        intent.data = Uri.parse("https://play.google.com/store/apps/details?id=$packageName")
         startActivity(intent)
     }
 
@@ -338,12 +338,12 @@ abstract class PdfBaseActivity<B : ViewBinding> : BaseActivity<B>(), IControl {
 
     override fun shareApp() {
         val sendIntent = Intent()
-        sendIntent.action = Intent.ACTION_SEND
-        sendIntent.putExtra(
-            Intent.EXTRA_TEXT,
-            "Check out the App at: https://play.google.com/store/apps/details?id=$packageName"
-        )
-        sendIntent.type = "text/plain"
+//        sendIntent.action = Intent.ACTION_SEND
+//        sendIntent.putExtra(
+//            Intent.EXTRA_TEXT,
+//            "Check out the App at: https://play.google.com/store/apps/details?id=$packageName"
+//        )
+//        sendIntent.type = "text/plain"
         startActivity(sendIntent)
     }
 
@@ -357,7 +357,7 @@ abstract class PdfBaseActivity<B : ViewBinding> : BaseActivity<B>(), IControl {
                         complete()
                     }
                     DialogRatingState.RATE_GOOD -> {
-                        openAppOnStore()
+                       // openAppOnStore()
                         complete()
                     }
                     DialogRatingState.COUNT_TIME -> complete()

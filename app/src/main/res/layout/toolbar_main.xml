@@ -135,6 +135,35 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_excel"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/excel"
+                android:fontFamily="sans-serif"
+                android:textFontWeight="500"
+                android:textColor="@color/dark_gray"
+                android:textSize="16sp"
+                android:paddingVertical="8dp" />
+
+            <View
+                android:id="@+id/underline_excel"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/dark_gray"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
                 android:id="@+id/tv_pdf"
                 android:textAllCaps="true"
                 android:layout_width="wrap_content"
@@ -207,34 +236,6 @@
 
             <View
                 android:id="@+id/underline_ppt"
-                android:layout_width="wrap_content"
-                android:layout_height="2dp"
-                android:background="@color/dark_gray"
-                android:layout_gravity="center"
-                android:visibility="gone"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_excel"
-                android:textAllCaps="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/excel"
-                android:fontFamily="sans-serif"
-                android:textFontWeight="500"
-                android:textColor="@color/dark_gray"
-                android:textSize="16sp"
-                android:paddingVertical="8dp" />
-
-            <View
-                android:id="@+id/underline_excel"
                 android:layout_width="wrap_content"
                 android:layout_height="2dp"
                 android:background="@color/dark_gray"

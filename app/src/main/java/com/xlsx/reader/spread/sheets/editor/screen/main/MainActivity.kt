@@ -1350,17 +1350,17 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
             binding.toolbar.tvPpt -> R.color.orange
             binding.toolbar.tvExcel -> R.color.green
             binding.toolbar.tvWord -> R.color.blue
-            binding.toolbar.tvPdf -> R.color.primaryColor
-            else -> R.color.red
+            binding.toolbar.tvPdf -> R.color.red
+            else -> R.color.green
         }
         val underlineResource = if (selectedTextView == binding.toolbar.tvPpt) {
             R.drawable.underline_orange
         } else if (selectedTextView == binding.toolbar.tvWord){
             R.drawable.underline_blue
-        } else if (selectedTextView == binding.toolbar.tvExcel){
-            R.drawable.underline_green
-        } else {
+        } else if (selectedTextView == binding.toolbar.tvPdf){
             R.drawable.underline
+        } else {
+            R.drawable.underline_green
         }
 
         // Cập nhật màu, kiểu chữ và underline cho item được chọn

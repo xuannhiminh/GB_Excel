@@ -278,7 +278,7 @@ class SettingActivity : PdfBaseActivity<ActivitySettingsBinding>() {
             }
 
             FunctionState.SHARE_APP -> {
-                shareApp()
+               // shareApp()
             }
 
             FunctionState.PRIVACY_POLICY -> {

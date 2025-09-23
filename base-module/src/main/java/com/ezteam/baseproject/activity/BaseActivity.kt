@@ -78,7 +78,7 @@ open abstract class BaseActivity<B : ViewBinding> : LocalizationActivity() {
             val spannable = if (showIcon) SpannableString("$appName\u00A0") else SpannableString(appName)
 
             val startIndex = 0
-            val endIndex = appName.indexOf(' ', appName.indexOf(' ') + 1).takeIf { it >= 0 } ?: appName.length
+            val endIndex = appName.indexOf(' ').takeIf { it >= 0 } ?: appName.length
 
             val redColor = ContextCompat.getColor(this, R.color.primaryColor)
             spannable.setSpan(

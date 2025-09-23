@@ -107,6 +107,9 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.9.3'
     implementation project(path: ':base-module')
     implementation "com.android.billingclient:billing:7.1.0"
+    implementation 'com.google.android.play:review:2.0.2'
+
+    implementation 'com.google.android.play:review-ktx:2.0.2'
 
     implementation 'commons-io:commons-io:2.20.0'
 
