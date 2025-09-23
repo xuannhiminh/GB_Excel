@@ -32,19 +32,19 @@ class NotificationManager(private val context: Context) {
     companion object {
         const val HIGH_CHANNEL_ID = "all_pdf_reader_channel"
         const val CALL_USE_APP_CHANNEL_ID = "all_pdf_reader_call_use_app_channel"
-        const val HIGH_CHANNEL_NAME = "PDF Reader Notifications"
-        const val CALL_USE_APP_CHANNEL_NAME = "PDF Reader Call Notifications"
-        const val CHANNEL_NAME_SERVICE = "PDF Reader Service Notifications"
-        const val CHANNEL_DESCRIPTION = "Notifications for All PDF Reader app"
-        const val CHANNEL_DESCRIPTION_FOREGROUND = "Notifications for All PDF Reader service"
+        const val HIGH_CHANNEL_NAME = "Sheets Reader Notifications"
+        const val CALL_USE_APP_CHANNEL_NAME = "Sheets Reader Call Notifications"
+        const val CHANNEL_NAME_SERVICE = "Sheets Reader Service Notifications"
+        const val CHANNEL_DESCRIPTION = "Notifications for Sheets Reader app"
+        const val CHANNEL_DESCRIPTION_FOREGROUND = "Notifications for Sheets Reader service"
         const val CHANNEL_ID_FOREGROUND = "all_pdf_reader_channel_foreground"
         const val GROUP_ID_FOREGROUND = "all_pdf_reader_group_foreground"
 
         // Channel thông báo cập nhật ứng dụng
         const val CHANNEL_ID_UPDATE = "all_pdf_reader_channel_update"
         const val GROUP_ID_UPDATE = "all_pdf_reader_group_update"
-        const val CHANNEL_NAME_UPDATE = "PDF Reader Update Notifications"
-        const val CHANNEL_DESCRIPTION_UPDATE = "Notifications for PDF Reader app updates and new features"
+        const val CHANNEL_NAME_UPDATE = "Sheets Reader Update Notifications"
+        const val CHANNEL_DESCRIPTION_UPDATE = "Notifications for Sheets Reader app updates and new features"
 
         // Notification IDs
         const val NEW_FILE_NOTIFICATION_ID = 1001

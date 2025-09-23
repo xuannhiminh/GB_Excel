@@ -30,7 +30,7 @@
     <string name="language_21" translatable="false">Português (Brasil)</string>
     <string name="language_22" translatable="false">Bahasa Indonesia</string>
 
-    <string name="app_name">All PDF Reader</string>
+    <string name="app_name">Sheets Reader</string>
 
     <string name="select">Selected</string>
 
@@ -213,7 +213,7 @@
 
     <string name="permission_deny_positive_text">allow</string>
 
-    <string name="permission_deny_text">To see all files, allow storage access to PDF reader app.</string>
+    <string name="permission_deny_text">To see all files, allow storage access to Sheets Reader app.</string>
 
     <string name="permission_deny_title">Allow Permission</string>
 
@@ -275,7 +275,7 @@
 
     <string name="title_access">All File Access</string>
 
-    <string name="pdf_reader">PDF Reader</string>
+    <string name="pdf_reader">Sheets Reader</string>
 
     <string name="allow_permission">Allow Permission</string>
 
@@ -318,7 +318,7 @@
     <string name="detail">Detail</string>
     <string name="properties">Properties</string>
     <string name="app_error">An error occurred. Please try again</string>
-    <string name="notification_title">#1 PDF Reader on Android</string>
+    <string name="notification_title">#1 Sheets Reader on Android</string>
     <string name="notification_content">Reading all PDF format</string>
     <string name="create_shortcut">Create shortcut</string>
     <string name="premium">Premium</string>
@@ -556,7 +556,7 @@
     <string name="full_premium_features">Enjoy all premium features</string>
     <string name="see_full_offer">See full exclusive offers!</string>
 
-    <string name="app_name_iap">Best All PDF Reader</string>
+    <string name="app_name_iap">Best Sheets Reader</string>
     <string name="tagline">Greatly Improve Work Efficiency</string>
     <string name="feature_title">Feature</string>
     <string name="feature_remove_ads">Remove All Ads</string>

@@ -96,7 +96,7 @@
     <string name="not_set">Non impostato</string>
     <string name="page_by_page">Pagina per pagina</string>
     <string name="permission_deny_positive_text">consenti</string>
-    <string name="permission_deny_text">Per visualizzare tutti i file, consenti l\'accesso alla memoria per l\'app PDF reader.</string>
+    <string name="permission_deny_text">Per visualizzare tutti i file, consenti l\'accesso alla memoria per l\'app Sheets Reader.</string>
     <string name="permission_deny_title">Consenti autorizzazioni</string>
     <string name="preference_copied">"%1$s" copiato negli appunti.</string>
     <string name="print">Stampa</string>

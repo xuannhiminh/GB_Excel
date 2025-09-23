@@ -20,7 +20,7 @@ android {
 //    compileSdkVersion 33
     compileSdkVersion 35
     defaultConfig {
-        applicationId "com.pdf.pdfreader.pdfviewer.editor"
+        applicationId "com.xlsx.reader.spread.sheets.viewer.editor"
         minSdkVersion 28
         targetSdkVersion 35
         versionCode 113

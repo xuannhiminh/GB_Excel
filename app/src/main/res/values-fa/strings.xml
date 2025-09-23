@@ -96,7 +96,7 @@
     <string name="not_set">تنظیم نشده</string>
     <string name="page_by_page">صفحه به صفحه</string>
     <string name="permission_deny_positive_text">اجازه بده</string>
-    <string name="permission_deny_text">برای مشاهده تمام فایل‌ها، دسترسی حافظه را به برنامه PDF Reader بدهید.</string>
+    <string name="permission_deny_text">برای مشاهده تمام فایل‌ها، دسترسی حافظه را به برنامه Sheets Reader بدهید.</string>
     <string name="permission_deny_title">اجازه دسترسی بدهید</string>
     <string name="preference_copied">"%1$s" در کلیپ‌بورد کپی شد.</string>
     <string name="print">چاپ</string>
@@ -127,7 +127,7 @@
     <string name="delete_content">آیا مطمئن هستید که می‌خواهید برای همیشه حذف شود؟</string>
     <string name="delete_all">آیا مطمئن هستید که می‌خواهید همه فایل‌های انتخاب‌شده را حذف کنید؟</string>
     <string name="title_access">دسترسی به تمام فایل‌ها</string>
-    <string name="pdf_reader">PDF Reader</string>
+    <string name="pdf_reader">Sheets Reader</string>
     <string name="allow_permission">اجازه دسترسی بده</string>
     <string name="content_access">لطفاً برای دسترسی به فایل‌های دستگاه، مجوز را بپذیرید.</string>
     <string name="button_permission">برو به تنظیمات</string>
@@ -150,7 +150,7 @@
     <string name="detail">جزئیات</string>
     <string name="properties">ویژگی‌ها</string>
     <string name="app_error">خطایی رخ داد. لطفاً دوباره تلاش کنید</string>
-    <string name="notification_title">برترین PDF Reader در اندروید</string>
+    <string name="notification_title">برترین Sheets Reader در اندروید</string>
     <string name="notification_content">خواندن همه فرمت‌های PDF</string>
     <string name="create_shortcut">ایجاد میانبر</string>
     <string name="premium">پرمیوم</string>

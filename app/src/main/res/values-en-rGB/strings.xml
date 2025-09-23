@@ -17,7 +17,7 @@
     <string name="intent_label_ppt_smart_editor">PPT Smart Editor</string>
     <string name="intent_label_ppt_print">PPT Print</string>
 
-    <string name="app_name">All PDF Reader</string>
+    <string name="app_name">Sheets Reader</string>
 
     <string name="select">Selected</string>
 
@@ -186,7 +186,7 @@
 
     <string name="permission_deny_positive_text">allow</string>
 
-    <string name="permission_deny_text">To see all files, allow storage access to PDF reader app.</string>
+    <string name="permission_deny_text">To see all files, allow storage access to Sheets Reader app.</string>
 
     <string name="permission_deny_title">Allow Permission</string>
 
@@ -236,7 +236,7 @@
 
     <string name="title_access">All File Access</string>
 
-    <string name="pdf_reader">PDF Reader</string>
+    <string name="pdf_reader">Sheets Reader</string>
 
     <string name="allow_permission">Allow Permission</string>
 
@@ -278,7 +278,7 @@
     <string name="detail">Detail</string>
     <string name="properties">Properties</string>
     <string name="app_error">An error occurred. Please try again</string>
-    <string name="notification_title">#1 PDF Reader on Android</string>
+    <string name="notification_title">#1 Sheets Reader on Android</string>
     <string name="notification_content">Reading all PDF format</string>
     <string name="create_shortcut">Create shortcut</string>
     <string name="premium">Premium</string>

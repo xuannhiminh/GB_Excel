@@ -43,7 +43,7 @@ object Merge {
                 document.open()
                 var numOfPages: Int
                 for (pdfPath in lstPath) {
-                    // Create pdf reader object to read each input pdf file
+                    // Create Sheets Reader object to read each input pdf file
                     pdfreader = PdfReader(pdfPath)
                     PdfReader.unethicalreading = true
                     // Get the number of pages of the pdf file

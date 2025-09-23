@@ -15,7 +15,7 @@ import java.io.*
 
 
 object FileSaveManager {
-    private const val BACKUP_FILE_DICT = "PDF Reader/Backup"
+    private const val BACKUP_FILE_DICT = "Sheets Reader/Backup"
 
     fun saveFileStorage(
         context: Context,

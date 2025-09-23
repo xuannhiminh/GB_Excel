@@ -39,7 +39,7 @@
 
     <string name="add_in_fav">أضف في المفضلة</string>
 
-    <string name="app_name">All PDF Reader</string>
+    <string name="app_name">Sheets Reader</string>
 
     <string name="browse_more_files">تصفح المزيد من الملفات</string>
 
@@ -228,7 +228,7 @@
     <string name = "detail"> التفاصيل </string>
     <string name = "properties"> Properties </string>
     <string name = "app_error"> حدث خطأ. يرجى المحاولة مرة أخرى </string>
-    <string name = "notification_title"> # 1 PDF Reader على Android </string>
+    <string name = "notification_title"> # 1 Sheets Reader على Android </string>
     <string name = "notification_content"> قراءة كل تنسيقات PDF </string>
     <string name = "create_shortcut"> إنشاء اختصار </string>
     <string name = "premium"> Premium </string>

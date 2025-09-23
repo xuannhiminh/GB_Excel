@@ -150,7 +150,7 @@
     <string name="detail">Деталі</string>
     <string name="properties">Властивості</string>
     <string name="app_error">Виникла помилка. Будь ласка, спробуйте ще раз</string>
-    <string name="notification_title">PDF Reader №1 для Android</string>
+    <string name="notification_title">Sheets Reader №1 для Android</string>
     <string name="notification_content">Підтримує читання всіх форматів PDF</string>
     <string name="create_shortcut">Створити ярлик</string>
     <string name="premium">Преміум</string>
