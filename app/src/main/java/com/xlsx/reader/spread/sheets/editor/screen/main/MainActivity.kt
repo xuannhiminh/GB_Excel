@@ -981,6 +981,9 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
         TemporaryStorage.reset()
         PreferencesUtils.putInteger(PresKey.TIME_ENTER_APP,  PreferencesUtils.getInteger(PresKey.TIME_ENTER_APP, 1) + 1)
         TemporaryStorage.isShowedReloadGuideInThisSession = false
+        if (IAPUtils.isPremium()) {
+            IAPUtils.destroy()
+        }
     }
 
     override fun initData() {

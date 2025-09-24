@@ -92,55 +92,7 @@ class IapActivityV2 : PdfBaseActivity<ActivityIapV3Binding>() {
                 return@getSubscriptionListingDetails
             }
             val pd = productDetails[0] ?: return@getSubscriptionListingDetails
-            val yearlyPlanOffer = pd.subscriptionOfferDetails
-                ?.find { it.basePlanId == IAPUtils.KEY_PREMIUM_YEARLY_PLAN }
-                ?: return@getSubscriptionListingDetails
 
-            val yearlyPriceText = yearlyPlanOffer.pricingPhases.pricingPhaseList
-                .firstOrNull { it.priceAmountMicros > 0 }
-                ?.formattedPrice
-                ?: "-"
-
-            val yearlyMicros = yearlyPlanOffer.pricingPhases.pricingPhaseList
-                .firstOrNull { it.priceAmountMicros > 0 }
-                ?.priceAmountMicros
-                ?: 0L
-
-            val monthlyAmount = if (yearlyMicros > 0) {
-                (yearlyMicros / 12.0) / 1_000_000.0
-            } else {
-                0.0
-            }
-            val currencyCode = yearlyPlanOffer.pricingPhases.pricingPhaseList
-                .firstOrNull { it.priceAmountMicros > 0 }
-                ?.priceCurrencyCode
-                ?: ""
-            val monthlyPriceText = String.format(
-                Locale.getDefault(),
-                "%.2f %s",
-                monthlyAmount,
-                AppUtils.getCurrencySymbol(currencyCode)
-            )
-
-
-//            yearlyPrice = yearlyPriceText
-//            monthlyPriceFromYear = monthlyPriceText
-
-            // Enable or disable the annual button based on subscription state
-            val isSubscribed = IAPUtils.isSubscribed(pd.productId)
-
-
-
-            // --- Monthly plan ---
-            val monthlyOffer = pd.subscriptionOfferDetails
-                ?.find { it.basePlanId == IAPUtils.KEY_PREMIUM_MONTHLY_PLAN }
-
-            if (monthlyOffer != null) {
-                val monthlyPhase = monthlyOffer.pricingPhases.pricingPhaseList.firstOrNull { it.priceAmountMicros > 0 }
-                val monthlyPriceText = monthlyPhase?.formattedPrice ?: "-"
-
-
-            }
 
             // --- Weekly plan ---
             val weeklyOffer = pd.subscriptionOfferDetails
@@ -153,6 +105,7 @@ class IapActivityV2 : PdfBaseActivity<ActivityIapV3Binding>() {
 
             }
 
+            val isSubscribed = IAPUtils.isSubscribed(pd.productId)
             // finish
             if (isSubscribed) {
                 navigateToNextScreen()
