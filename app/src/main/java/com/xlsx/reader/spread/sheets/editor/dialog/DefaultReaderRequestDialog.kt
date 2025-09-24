@@ -40,8 +40,8 @@ class DefaultReaderRequestDialog : DialogFragment() {
         val allowCancelOutside = FirebaseRemoteConfigUtil.getInstance().isDialogCancelOnTouchOutside()
         val defaultReaderRequestDialogShowTime = PreferencesHelper.getInt("DefaultReaderRequestDialogShowTime", 0)
         if (defaultReaderRequestDialogShowTime < FirebaseRemoteConfigUtil.getInstance().getTimeBlockDefaultReader()) {
-            dialog.setCancelable(false)
-            dialog.setCanceledOnTouchOutside(false)
+            dialog.setCancelable(true)
+            dialog.setCanceledOnTouchOutside(true)
         } else {
             dialog.setCancelable(allowCancelOutside)
             dialog.setCanceledOnTouchOutside(allowCancelOutside)
