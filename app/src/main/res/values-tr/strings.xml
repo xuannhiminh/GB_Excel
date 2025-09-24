@@ -18,7 +18,7 @@
     <string name="intent_label_pdf_ppt">PPT Düzenleyici</string>
     <string name="intent_label_ppt_smart_editor">Akıllı PPT Düzenleyici</string>
     <string name="intent_label_ppt_print">PPT Yazdır</string>
-    <string name="set_pdf_reader_as_your_default_excel_file_viewer"><b>%s</b>'i varsayılan Excel dosya görüntüleyiciniz olarak ayarlayın</string>
+    <string name="set_pdf_reader_as_your_default_excel_file_viewer"><b>%s</b>\'i varsayılan Excel dosya görüntüleyiciniz olarak ayarlayın</string>
 
     <string name="click_back_to_app">Ardından uygulamaya dönmek için ⬅ tuşuna basın</string>
 
