@@ -80,7 +80,7 @@ class NotificationManager(private val context: Context) {
         val remoteCustomView = createWidgetNotificationView()
         val remoteCustomBigView = createWidgetNotificationBigView()
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_FOREGROUND)
-            .setSmallIcon(R.drawable.ic_notitication)
+            .setSmallIcon(R.drawable.icon_badge)
             .setBadgeIconType(NotificationCompat.BADGE_ICON_NONE)
             .setCustomContentView(remoteCustomView)
             .setCustomBigContentView(remoteCustomBigView)
@@ -439,7 +439,7 @@ class NotificationManager(private val context: Context) {
         )
 
         val notification = NotificationCompat.Builder(context, HIGH_CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notitication)
+            .setSmallIcon(R.drawable.icon_badge)
             .setCustomContentView(customView)
             .setCustomBigContentView(customBigView)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -488,7 +488,7 @@ class NotificationManager(private val context: Context) {
 
 
         val notification = NotificationCompat.Builder(context, CALL_USE_APP_CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notitication)
+            .setSmallIcon(R.drawable.icon_badge)
             .setCustomContentView(customView)
             .setCustomBigContentView(customBigView)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -570,7 +570,7 @@ class NotificationManager(private val context: Context) {
         val customBigView = createCustomNotificationBigView(title, content, filePath, CALL_USE_APP_NOTIFICATION_ID, buttonText)
 
         val notification = NotificationCompat.Builder(context, CALL_USE_APP_CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notitication)
+            .setSmallIcon(R.drawable.icon_badge)
             .setCustomContentView(customView)
             .setCustomBigContentView(customBigView)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -596,7 +596,7 @@ class NotificationManager(private val context: Context) {
         val customBigView = createCustomNotificationBigView(title, content, filePath, CALL_USE_APP_NOTIFICATION_ID, buttonText)
 
         val notification = NotificationCompat.Builder(context, CALL_USE_APP_CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notitication)
+            .setSmallIcon(R.drawable.icon_badge)
             .setCustomContentView(customView)
             .setCustomBigContentView(customBigView)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -628,7 +628,7 @@ class NotificationManager(private val context: Context) {
         )
 
         val notification = NotificationCompat.Builder(context, HIGH_CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notitication)
+            .setSmallIcon(R.drawable.icon_badge)
             .setCustomContentView(customView)
             .setCustomBigContentView(customBigView)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -662,7 +662,7 @@ class NotificationManager(private val context: Context) {
         val notification = NotificationCompat.Builder(context, HIGH_CHANNEL_ID)
             .setContentTitle(context.getString(R.string.daily_call_open_app_title))
             .setContentText(context.getString(R.string.daily_call_open_app_content))
-            .setSmallIcon(R.drawable.ic_notitication)
+            .setSmallIcon(R.drawable.icon_badge)
             .setContentIntent(openAppPendingIntent)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setCategory(NotificationCompat.CATEGORY_CALL)
@@ -692,7 +692,7 @@ class NotificationManager(private val context: Context) {
         )
 
         val notification = NotificationCompat.Builder(context, HIGH_CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notitication)
+            .setSmallIcon(R.drawable.icon_badge)
             .setCustomContentView(customView)
             .setCustomBigContentView(customBigView)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -725,7 +725,7 @@ class NotificationManager(private val context: Context) {
         )
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_UPDATE)
-            .setSmallIcon(R.drawable.ic_notitication)
+            .setSmallIcon(R.drawable.icon_badge)
             .setCustomContentView(customView)
             .setCustomBigContentView(customBigView)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -758,7 +758,7 @@ class NotificationManager(private val context: Context) {
         )
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_UPDATE)
-            .setSmallIcon(R.drawable.ic_notitication)
+            .setSmallIcon(R.drawable.icon_badge)
             .setCustomContentView(customView)
             .setCustomBigContentView(customBigView)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -812,7 +812,7 @@ class NotificationManager(private val context: Context) {
         )
 
         val notification = NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(R.drawable.ic_notitication)
+            .setSmallIcon(R.drawable.icon_badge)
             .setContentTitle(title)
             .setContentText(body)
             .setStyle(NotificationCompat.BigTextStyle().bigText(body))
