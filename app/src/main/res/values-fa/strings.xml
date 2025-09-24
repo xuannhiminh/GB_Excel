@@ -456,6 +456,7 @@
     <string name="thanks_for_feedback">از بازخورد شما متشکریم!</string>
     <string name="deliver_better_experience">ما تلاش می‌کنیم تجربه بهتری ارائه دهیم.</string>
     <string name="feature_request_limit">فقط پس از ۱ ساعت می‌توانید دوباره ارسال کنید.</string>
+    <string name="set_pdf_reader_as_your_default_excel_file_viewer">‏<b>%s</b> را به عنوان نمایشگر پیش‌فرض فایل‌های Excel تنظیم کنید</string>
 
 
     <string name="fix_your_issue">اطلاعاتی که به ما کمک می‌کند مشکل شما را سریع‌تر رفع کنیم</string>

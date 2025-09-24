@@ -454,6 +454,7 @@
     <string name="thanks_for_feedback">ご意見ありがとうございます！</string>
     <string name="deliver_better_experience">より良い体験を提供できるよう努めます。</string>
     <string name="feature_request_limit">再送信できるのは1時間後のみです。</string>
+    <string name="set_pdf_reader_as_your_default_excel_file_viewer"><b>%s</b> をデフォルトのExcelファイルビューアに設定</string>
 
 
     <string name="fix_your_issue">問題をより早く解決するための情報</string>

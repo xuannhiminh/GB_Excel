@@ -550,6 +550,7 @@
     <string name="thanks_for_feedback">Terima kasih atas masukan Anda!</string>
     <string name="deliver_better_experience">Kami berusaha memberikan pengalaman yang lebih baik.</string>
     <string name="feature_request_limit">Anda hanya dapat mengirim ulang setelah 1 jam.</string>
+    <string name="set_pdf_reader_as_your_default_excel_file_viewer">Atur <b>%s</b> sebagai penampil file Excel default Anda</string>
 
     <string name="fix_your_issue">Informasi agar kami dapat memperbaiki masalah Anda lebih cepat</string>
     <string name="your_feedback">Masukan Anda</string>

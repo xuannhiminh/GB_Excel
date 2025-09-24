@@ -267,6 +267,7 @@
     <string name="button_permission">اذهب إلى الإعدادات</string>
     <string name="permission_required">الإذن مطلوب</string>
     <string name="set_pdf_reader_as_your_default_pdf_file_viewer">عيّن <b>%s</b> كمشاهد ملفات PDF الافتراضي الخاص بك</string>
+    <string name="set_pdf_reader_as_your_default_excel_file_viewer">تعيين <b>%s</b> كعارض افتراضي لملفات Excel</string>
     <string name="pick_this_option_to_open_files_fast_and_make_reading_super_easy_and_fun">اختر هذا الخيار لفتح الملفات بسرعة وجعل القراءة سهلة وممتعة!</string>
     <string name="set_as_default">تعيين كافتراضي</string>
     <string name="select_pdf_reader_icon_and_click_always_to_set_it_as_default">حدد رمز <b>%s</b> وانقر على <b>%s</b> لتعيينه كافتراضي!</string>

@@ -459,6 +459,7 @@
     <string name="thanks_for_feedback">Bedankt voor uw feedback!</string>
     <string name="deliver_better_experience">We streven ernaar om een betere ervaring te bieden.</string>
     <string name="feature_request_limit">U kunt pas na 1 uur opnieuw verzenden.</string>
+    <string name="set_pdf_reader_as_your_default_excel_file_viewer">Stel <b>%s</b> in als uw standaard Excel-bestandsviewer</string>
 
 
     <string name="fix_your_issue">Informatie zodat wij uw probleem sneller kunnen verhelpen</string>

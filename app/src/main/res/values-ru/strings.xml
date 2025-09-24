@@ -20,6 +20,7 @@
     <string name="intent_label_ppt_print">Печать PPT</string>
     <string name="click_back_to_app">Затем нажмите ⬅ для возврата в приложение</string>
     <string name="start_free_trial">Start Free Trial</string>
+    <string name="set_pdf_reader_as_your_default_excel_file_viewer">Установите <b>%s</b> как программу просмотра файлов Excel по умолчанию</string>
 
 
     <string name="add_in_fav">Добавить в избранное</string>

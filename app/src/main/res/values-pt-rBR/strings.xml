@@ -18,6 +18,7 @@
     <string name="intent_label_ppt_smart_editor">Editor Inteligente de PPT</string>
     <string name="intent_label_ppt_print">Imprimir PPT</string>
     <string name="click_back_to_app">Depois pressione ⬅ para voltar ao aplicativo</string>
+    <string name="set_pdf_reader_as_your_default_excel_file_viewer">Defina <b>%s</b> como seu visualizador padrão de arquivos Excel</string>
 
 
     <string name="add_in_fav">Adicionar aos favoritos</string>

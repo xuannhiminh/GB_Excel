@@ -440,6 +440,7 @@
     <string name="thanks_for_feedback">Vielen Dank für Ihr Feedback!</string>
     <string name="deliver_better_experience">Wir bemühen uns, ein besseres Erlebnis zu bieten.</string>
     <string name="feature_request_limit">Sie können erst nach 1 Stunde erneut senden</string>
+    <string name="set_pdf_reader_as_your_default_excel_file_viewer">Legen Sie <b>%s</b> als Ihren Standard-Excel-Dateibetrachter fest</string>
 
 
     <string name="fix_your_issue">Informationen, damit wir Ihr Problem schneller beheben können</string>

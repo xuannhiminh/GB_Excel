@@ -541,6 +541,7 @@
     <string name="thanks_for_feedback">Merci pour vos retours !</string>
     <string name="deliver_better_experience">Nous nous efforçons d\'offrir une meilleure expérience.</string>
     <string name="feature_request_limit">Vous ne pouvez renvoyer qu\'après 1 heure.</string>
+    <string name="set_pdf_reader_as_your_default_excel_file_viewer">Définissez <b>%s</b> comme votre visionneuse de fichiers Excel par défaut</string>
 
 
     <string name="fix_your_issue">Informations pour nous permettre de résoudre votre problème plus rapidement</string>

@@ -19,6 +19,7 @@
     <string name="intent_label_ppt_smart_editor">Trình chỉnh sửa thông minh PPT</string>
     <string name="intent_label_ppt_print">In PPT</string>
     <string name="start_free_trial">Start Free Trial</string>
+    <string name="set_pdf_reader_as_your_default_excel_file_viewer">Đặt <b>%s</b> làm trình xem tệp Excel mặc định của bạn</string>
 
 
     <string name="add_in_fav">Thêm yêu thích</string>
