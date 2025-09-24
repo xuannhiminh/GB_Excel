@@ -29,6 +29,7 @@ import com.facebook.ads.AdSettings
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.RequestConfiguration
 import com.google.firebase.FirebaseApp
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.appcheck.FirebaseAppCheck
 import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory
 import com.google.firebase.firestore.FirebaseFirestore
@@ -79,6 +80,8 @@ class PdfApplication: MyLibApplication() {
 //                    DebugAppCheckProviderFactory.getInstance()
 //                )
             FirebaseMessaging.getInstance().subscribeToTopic("debug_device")
+            FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(false);
+
         }
         subscribeToTimezoneTopic()
 
