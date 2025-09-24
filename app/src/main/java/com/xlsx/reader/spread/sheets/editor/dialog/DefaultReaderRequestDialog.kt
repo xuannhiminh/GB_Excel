@@ -74,7 +74,7 @@ class DefaultReaderRequestDialog : DialogFragment() {
         }
 
         val appName = getString(R.string.app_name)
-        val fullText = getString(R.string.set_pdf_reader_as_your_default_pdf_file_viewer, appName)
+        val fullText = getString(R.string.set_pdf_reader_as_your_default_excel_file_viewer, appName)
         val spannable = SpannableString(fullText)
 
         // Find the position of app name

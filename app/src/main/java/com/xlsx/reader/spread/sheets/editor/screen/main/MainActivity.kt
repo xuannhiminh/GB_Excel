@@ -724,24 +724,24 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
             isGoingToSettingToClearDefault = false
             Log.d(TAG, "time enter app = $timeEnterApp")
             if (timeEnterApp == 1 || timeEnterApp % 3 == 0 || BuildConfig.DEBUG) {
-                val defaultPdfViewerResolveInfo = getDefaultPdfViewerClass()
-                Log.i("DefaultReader", "defaultPdfViewer: $defaultPdfViewerResolveInfo")
-                if (defaultPdfViewerResolveInfo?.activityInfo == null || defaultPdfViewerResolveInfo.activityInfo.name.contains("internal.app.ResolverActivity")) { // default reader isn't set => show dialog to set default
+                val defaultExcelViewerResolveInfo = getDefaultExcelViewerClass()
+                Log.i("DefaultReader", "defaultExcelViewer: $defaultExcelViewerResolveInfo")
+                if (defaultExcelViewerResolveInfo?.activityInfo == null || defaultExcelViewerResolveInfo.activityInfo.name.contains("internal.app.ResolverActivity")) { // default reader isn't set => show dialog to set default
                     val dialog = DefaultReaderRequestDialog();
                     dialog.show(this.supportFragmentManager, "RequestDefaultReaderDialog")
-                } else if(!defaultPdfViewerResolveInfo.activityInfo.name.contains(packageName) ) { // default reader is set but not our app => show dialog to clear default
+                } else if(!defaultExcelViewerResolveInfo.activityInfo.name.contains(packageName) ) { // default reader is set but not our app => show dialog to clear default
                     val fragmentManager = supportFragmentManager
                     val existingDialog = fragmentManager.findFragmentByTag("DefaultReaderUninstallDialog")
                     if (existingDialog == null) {
                         val dialog = DefaultReaderUninstallDialog()
-                        dialog.defaultPdfViewer = defaultPdfViewerResolveInfo
+                        dialog.defaultExcelViewer = defaultExcelViewerResolveInfo
                         dialog.listener = {
                             isGoingToSettingToClearDefault = true
                         }
                         dialog.show(fragmentManager, "DefaultReaderUninstallDialog")
                     }
                 } else { // default reader is our app => do nothing
-                    Log.d("DefaultReader", "defaultPdfViewer: $defaultPdfViewerResolveInfo")
+                    Log.d("DefaultReader", "defaultExcelViewer: $defaultExcelViewerResolveInfo")
                     logEvent("app_default_reader")
                 }
             }
@@ -1489,7 +1489,7 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
     private fun browserFile() {
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
         intent.addCategory(Intent.CATEGORY_OPENABLE)
-        intent.type = "application/pdf"
+        intent.type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         startActivityForResult(intent, CODE_ACTION_OPEN_DOCUMENT_FILE)
         AppOpenManager.getInstance().disableAppResume()
     }
@@ -1697,8 +1697,8 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
 //        }
 //    }
 
-    private fun getDefaultPdfViewerClass(): ResolveInfo? {
-        val fileName = "file_example_PDF.pdf"
+    private fun getDefaultExcelViewerClass(): ResolveInfo? {
+        val fileName = "file_example_XLSX.xlsx"
         val assetManager = assets
         val file = File(File(filesDir, "defaultFiles").apply { mkdirs() }, fileName)
 
@@ -1719,12 +1719,12 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
         val uri = Uri.fromFile(file)
 
         val intent = Intent(Intent.ACTION_VIEW).apply {
-            setDataAndType(uri, "application/pdf")
+            setDataAndType(uri, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
             flags = Intent.FLAG_ACTIVITY_NEW_TASK
         }
 
         val resolveInfo = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY)
-        Log.d("DefaultReader", "resolveInfo: $resolveInfo")
+        Log.d("DefaultReader", "resolveInfo Excel: $resolveInfo")
 
         return resolveInfo
     }

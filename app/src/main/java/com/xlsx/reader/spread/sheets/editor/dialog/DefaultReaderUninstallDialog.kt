@@ -31,7 +31,7 @@ class DefaultReaderUninstallDialog : DialogFragment() {
     private val binding get() = _binding!!
     private var isViewDestroyed = false
     private var isAdLoaded = false
-    var defaultPdfViewer: ResolveInfo? = null
+    var defaultExcelViewer: ResolveInfo? = null
     var listener: Unit.() -> Unit = {}
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
@@ -62,10 +62,10 @@ class DefaultReaderUninstallDialog : DialogFragment() {
         }
 
             val pm = requireContext().packageManager
-            val appIcon = defaultPdfViewer?.loadIcon(pm)
-            val packageName = defaultPdfViewer?.activityInfo?.packageName
+            val appIcon = defaultExcelViewer?.loadIcon(pm)
+            val packageName = defaultExcelViewer?.activityInfo?.packageName
 
-            binding.fileName.text = defaultPdfViewer?.loadLabel(pm).toString()
+            binding.fileName.text = defaultExcelViewer?.loadLabel(pm).toString()
             binding.fileIcon.setImageDrawable(appIcon)
 
             binding.btnReset.setOnClickListener {
@@ -90,7 +90,7 @@ class DefaultReaderUninstallDialog : DialogFragment() {
         }
 
         val appName = getString(R.string.app_name)
-        val fullText = getString(R.string.set_pdf_reader_as_your_default_pdf_file_viewer, appName)
+        val fullText = getString(R.string.set_pdf_reader_as_your_default_excel_file_viewer, appName)
         val spannable = SpannableString(fullText)
 
         // Find the position of app name
