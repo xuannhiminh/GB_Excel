@@ -20,6 +20,6 @@ class AppUtils {
         }
          const val PDF_DETAIL_EZLIB = 0L // 0 mean use EZ lib pdf detail, 1 mean use SoLib PDF detail
          const val FOLDER_EXTERNAL_IN_DOWNLOADS = "SheetsReaderGB"
-         const val PUBLIC_LICENSE_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjKN3Ud9WAK4agEoc9eUwtFw/da7h4jQAF2Hbh5DVoxTWdV4AG1W81knUOhn0EpqYXy+mModXMoZW95dD565bBxrdWCsTxmbRAcj+X85iub9MqSJWDZonhgZ6LjX4RMoCa7tPobEqILPWKDprz/MU3Fi3g0k884byr3Bfufj5ZIhezQB9mJm6fLf75tO5EQMGe4CIGDJo9P6KkcI7gFiIzO2Ia2v/oopo+nz0x20WMuYV1UQlAoTXIIVu47XtUgYUdQxrjfnh8k5s3d0VlXzJJeDIQBxHHI/1QOR8OlWX2Eumre9zaR2OIk9H+6ayOMEOaK6iKpbBei87vNqvsSGy/QIDAQAB"
+         const val PUBLIC_LICENSE_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh9aRvWOCOxbhgeK3Yxn5AwxFuU1UsbCs9AJ1ksGKcmFPDpIpV37doDoH9Ti8Bvw08Tmpm2X5ZJ0/mufA1UJYb7bYLjmqLMWyw9NLdp+ZVeCFqbCLeEbuVtx+xh00yNjYDdtWeYUEVb8JD3CtLQ8Lt4yGO9wyeQaadIvjPLoqLZujM8cfrFm9hhFwpkPIj8w6pXfJUC1ZQ+xP+sZ8Ul2MZq/k6qzAbmsMLukT/tJYHjfCBqxndpskNpDdnz5IlzuofIo8qpCO2d+LSCjlq4xeIBaXDulcilufsEYN0K22tijj0BKRs0pxuazsvMUNmft2t4kw2WwFdTa9JmiH1KYjNQIDAQAB"
      }
  }
