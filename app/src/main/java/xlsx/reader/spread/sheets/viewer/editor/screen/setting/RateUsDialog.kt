@@ -1,8 +1,6 @@
 package xlsx.reader.spread.sheets.viewer.editor.screen.setting
 
 import android.app.Dialog
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
@@ -63,7 +61,8 @@ class RateUsDialog : DialogFragment() {
         try {
             firebaseAnalytics = FirebaseAnalytics.getInstance(requireContext())
         } catch (e: Exception) {
-
+            e.printStackTrace()
+            Log.e("RateUsDialog", "Error showing RateUsDialog: ${e.message}", e)
         }
         binding.btnRate.setOnClickListener {
             if (selectedRating == 0) return@setOnClickListener
@@ -92,8 +91,8 @@ class RateUsDialog : DialogFragment() {
                 }
             } else {
                 showSuccessDialog()
-                @ReviewErrorCode val reviewErrorCode = (task.getException() as ReviewException).errorCode
-                Log.d("RateUsDialog", "launchInAppReview: error")
+                @ReviewErrorCode val reviewErrorCode = (task.exception as ReviewException).errorCode
+                Log.d("RateUsDialog", "launchInAppReview: $reviewErrorCode")
             }
         }
     }
@@ -103,12 +102,12 @@ class RateUsDialog : DialogFragment() {
             dismiss()
         }
         try {
-            dialog.show(this.parentFragmentManager, "FeedBackSucessDialog")
-        } catch (e: Exception) {
-            Log.e("DefaultReaderRequestDialog", "Error showing FeedBackSucessDialog: ${e.message}")
+            dialog.show(this.parentFragmentManager, "FeedBackSuccessDialog")
+        } catch (e : Exception)
+        {
+            Log.e("DefaultReaderRequestDialog", "Error showing FeedBackSuccessDialog: ${e.message}")
         }
     }
-
     private fun setupStarRating() {
         val stars = listOf(
             binding.star1,
