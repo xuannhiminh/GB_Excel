@@ -183,7 +183,7 @@ class SuccessActivity : PdfToolBaseActivity<ActivityToolSuccessBinding>(), View.
         }
         Admob.getInstance().setOpenActivityAfterShowInterAds(false)
         Admob.getInstance().loadAndShowInter(this,
-            getString(R.string.inter_extract_image),
+            getString(R.string.inter_filedetail),
             100, 8000, interCallback)
     }
     override fun viewBinding(): ActivityToolSuccessBinding {
