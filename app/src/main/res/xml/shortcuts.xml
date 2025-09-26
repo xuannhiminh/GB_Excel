@@ -7,7 +7,7 @@
         android:shortcutLongLabel="@string/uninstall">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.xlsx.reader.spread.sheets.viewer.editor"
-            android:targetClass="com.xlsx.reader.spread.sheets.viewer.editor.screen.uninstall.UninstallActivity" />
+            android:targetPackage="xlsx.reader.spread.sheets.viewer.editor"
+            android:targetClass="xlsx.reader.spread.sheets.viewer.editor.screen.uninstall.UninstallActivity" />
     </shortcut>
 </shortcuts>
