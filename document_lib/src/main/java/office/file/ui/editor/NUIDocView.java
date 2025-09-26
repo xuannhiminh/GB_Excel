@@ -4245,7 +4245,7 @@ public class NUIDocView extends FrameLayout implements OnClickListener, OnTabCha
             } catch (NullPointerException e) {
             }
         } else {
-            throw new UnsupportedOperationException();
+          //  throw new UnsupportedOperationException();
         }
     }
 
