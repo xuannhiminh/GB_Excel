@@ -27,7 +27,7 @@ import xlsx.reader.spread.sheets.viewer.editor.notification.NotificationManager
 import xlsx.reader.spread.sheets.viewer.editor.receiver.HomeButtonReceiver
 import xlsx.reader.spread.sheets.viewer.editor.receiver.UnlockReceiver
 import xlsx.reader.spread.sheets.viewer.editor.utils.AppUtils
-import xlsx.reader.spread.sheets.viewer.editor.utils.FirebaseRemoteConfigUtil
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 
 class NotificationForegroundService: Service() {
 

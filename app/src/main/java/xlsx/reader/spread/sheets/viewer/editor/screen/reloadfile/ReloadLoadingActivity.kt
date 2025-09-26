@@ -22,7 +22,7 @@ import com.nlbn.ads.util.Admob
 import xlsx.reader.spread.sheets.viewer.editor.R
 import xlsx.reader.spread.sheets.viewer.editor.databinding.ActivityReloadingBinding
 import xlsx.reader.spread.sheets.viewer.editor.screen.main.MainViewModel
-import xlsx.reader.spread.sheets.viewer.editor.utils.FirebaseRemoteConfigUtil
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

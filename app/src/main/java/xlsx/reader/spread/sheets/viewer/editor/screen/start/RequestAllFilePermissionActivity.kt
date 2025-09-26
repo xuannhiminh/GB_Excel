@@ -26,7 +26,7 @@ import xlsx.reader.spread.sheets.viewer.editor.screen.base.PdfBaseActivity
 import xlsx.reader.spread.sheets.viewer.editor.screen.language.LanguageActivity
 import xlsx.reader.spread.sheets.viewer.editor.screen.main.MainActivity
 import xlsx.reader.spread.sheets.viewer.editor.screen.main.MainViewModel
-import xlsx.reader.spread.sheets.viewer.editor.utils.FirebaseRemoteConfigUtil
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 

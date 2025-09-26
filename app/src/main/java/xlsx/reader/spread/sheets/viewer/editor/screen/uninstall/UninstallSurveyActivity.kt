@@ -28,7 +28,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.ezteam.baseproject.utils.IAPUtils
 import com.google.firebase.firestore.FirebaseFirestore
 import xlsx.reader.spread.sheets.viewer.editor.model.FeedbackData
-import xlsx.reader.spread.sheets.viewer.editor.utils.FirebaseRemoteConfigUtil
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 
 class UninstallSurveyActivity : PdfBaseActivity<ActivityUninstallReasonBinding>() {
     private lateinit var adapter: IssueOptionAdapter

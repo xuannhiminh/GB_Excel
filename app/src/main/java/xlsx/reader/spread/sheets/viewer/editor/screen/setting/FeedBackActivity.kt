@@ -22,7 +22,7 @@ import xlsx.reader.spread.sheets.viewer.editor.databinding.ActivityFeedbackBindi
 import xlsx.reader.spread.sheets.viewer.editor.model.FeedbackData
 import xlsx.reader.spread.sheets.viewer.editor.screen.base.PdfBaseActivity
 import xlsx.reader.spread.sheets.viewer.editor.screen.setting.FeedBackSucessDialog
-import xlsx.reader.spread.sheets.viewer.editor.utils.FirebaseRemoteConfigUtil
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 
 class FeedBackActivity : PdfBaseActivity<ActivityFeedbackBinding>() {
 

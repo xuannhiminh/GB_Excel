@@ -100,7 +100,7 @@ import xlsx.reader.spread.sheets.viewer.editor.screen.iap.IapActivity
 import xlsx.reader.spread.sheets.viewer.editor.service.NotificationForegroundService
 import xlsx.reader.spread.sheets.viewer.editor.utils.AppUtils
 import xlsx.reader.spread.sheets.viewer.editor.utils.FileSaveManager
-import xlsx.reader.spread.sheets.viewer.editor.utils.FirebaseRemoteConfigUtil
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 import xlsx.reader.spread.sheets.viewer.editor.utils.createPdf.OnPDFCreatedInterface
 import xlsx.reader.spread.sheets.viewer.editor.widgets.Widget1
 import xlsx.reader.spread.sheets.viewer.editor.widgets.Widget2

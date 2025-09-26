@@ -43,7 +43,7 @@ import xlsx.reader.spread.sheets.viewer.editor.screen.main.MainActivity
 import xlsx.reader.spread.sheets.viewer.editor.screen.main.MainViewModel
 import xlsx.reader.spread.sheets.viewer.editor.service.NotificationForegroundService
 import xlsx.reader.spread.sheets.viewer.editor.utils.AppUtils
-import xlsx.reader.spread.sheets.viewer.editor.utils.FirebaseRemoteConfigUtil
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope

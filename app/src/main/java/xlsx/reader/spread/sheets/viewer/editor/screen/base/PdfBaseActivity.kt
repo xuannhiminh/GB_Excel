@@ -35,7 +35,7 @@ import xlsx.reader.spread.sheets.viewer.editor.model.FileModel
 import xlsx.reader.spread.sheets.viewer.editor.screen.rate.DialogRating
 import xlsx.reader.spread.sheets.viewer.editor.screen.rate.DialogRatingState
 import xlsx.reader.spread.sheets.viewer.editor.utils.AppUtils.Companion.PDF_DETAIL_EZLIB
-import xlsx.reader.spread.sheets.viewer.editor.utils.FirebaseRemoteConfigUtil
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 import xlsx.reader.spread.sheets.viewer.editor.utils.createPdf.Config
 import xlsx.reader.spread.sheets.viewer.editor.utils.createPdf.CreatePdf
 import xlsx.reader.spread.sheets.viewer.editor.utils.createPdf.OnPDFCreatedInterface

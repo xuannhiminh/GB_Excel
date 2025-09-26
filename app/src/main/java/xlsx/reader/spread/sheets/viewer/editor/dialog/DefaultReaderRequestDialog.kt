@@ -20,7 +20,7 @@ import com.nlbn.ads.util.Admob
 import xlsx.reader.spread.sheets.viewer.editor.R
 import xlsx.reader.spread.sheets.viewer.editor.databinding.DefaultReaderRequestDialogBinding
 import xlsx.reader.spread.sheets.viewer.editor.screen.language.PreferencesHelper
-import xlsx.reader.spread.sheets.viewer.editor.utils.FirebaseRemoteConfigUtil
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 
 class DefaultReaderRequestDialog : DialogFragment() {
     override fun getTheme(): Int {

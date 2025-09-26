@@ -42,7 +42,7 @@ import xlsx.reader.spread.sheets.viewer.editor.notification.NotificationManager
 import xlsx.reader.spread.sheets.viewer.editor.screen.iap.IapActivity
 import xlsx.reader.spread.sheets.viewer.editor.screen.language.PreferencesHelper
 import xlsx.reader.spread.sheets.viewer.editor.screen.start.SplashActivity
-import xlsx.reader.spread.sheets.viewer.editor.utils.FirebaseRemoteConfigUtil
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 import office.file.ui.MyLibApplication
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
