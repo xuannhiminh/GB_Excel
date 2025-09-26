@@ -314,7 +314,7 @@ class MainViewModel(
     }
 
     fun addSameFilesInternal() {
-        val sampleFiles = listOf("file_example_PDF.pdf", "file_example_DOC.doc", "file_example_PPT.ppt", "file_example_XLS.xls")
+        val sampleFiles = listOf("file_example_PDF.pdf", "file_example_DOC.doc", "file_example_PPT.ppt", "file_example_XLSX.xlsx")
         var newFiles = sampleFiles.mapNotNull { fileName -> copyPdfFromAssetsToInternalDir(fileName) }
         var time = 966326400000 // 15082000150000
         newFiles.forEach { fileModel ->
@@ -328,7 +328,7 @@ class MainViewModel(
     }
 
     fun addSameFilesExternal() {
-        val sampleFiles = listOf("file_example_PDF.pdf", "file_example_DOC.doc", "file_example_PPT.ppt", "file_example_XLS.xls")
+        val sampleFiles = listOf("file_example_PDF.pdf", "file_example_DOC.doc", "file_example_PPT.ppt", "file_example_XLSX.xlsx")
         TemporaryStorage.isSavingFileNotNoti = true
         var newFiles = sampleFiles.mapNotNull { fileName ->
             copyPdfFromAssetsToDownloads(fileName)
