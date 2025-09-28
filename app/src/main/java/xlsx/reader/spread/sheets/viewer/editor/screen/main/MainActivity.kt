@@ -238,17 +238,16 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
     }
 
     private fun checkStoragePermissionToShowUI() {
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-//            binding.layoutPermission.visibility =
-//                if (Environment.isExternalStorageManager()) View.GONE else View.VISIBLE
-//
-//        } else {
-//            val permission = Manifest.permission.WRITE_EXTERNAL_STORAGE
-//
-//            val isPermissionGranted = ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED
-//            binding.layoutPermission.visibility = if (isPermissionGranted) View.GONE else View.VISIBLE
-//        }
-        binding.layoutPermission.visibility = View.GONE
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            binding.layoutPermission.visibility =
+                if (Environment.isExternalStorageManager()) View.GONE else View.VISIBLE
+
+        } else {
+            val permission = Manifest.permission.WRITE_EXTERNAL_STORAGE
+
+            val isPermissionGranted = ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED
+            binding.layoutPermission.visibility = if (isPermissionGranted) View.GONE else View.VISIBLE
+        }
     }
     private fun loadBannerAds(){
         if (Admob.getInstance().isLoadFullAds && !IAPUtils.isPremium()) {

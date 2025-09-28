@@ -1,8 +1,6 @@
 package xlsx.reader.spread.sheets.viewer.editor.screen.language
 
-import android.Manifest
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
@@ -10,7 +8,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewTreeObserver
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import xlsx.reader.spread.sheets.viewer.editor.databinding.ActivityLanguageBinding
 import xlsx.reader.spread.sheets.viewer.editor.screen.main.MainActivity
@@ -18,7 +15,6 @@ import com.ezteam.baseproject.activity.BaseActivity
 import com.ezteam.baseproject.animation.AnimationUtils
 import com.ezteam.baseproject.extensions.hasExtraKeyContaining
 import com.ezteam.baseproject.iapLib.v3.BillingProcessor
-import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 import com.ezteam.baseproject.utils.IAPUtils
 import com.ezteam.baseproject.utils.PreferencesUtils
 import com.ezteam.baseproject.utils.SystemUtils
@@ -34,7 +30,6 @@ import xlsx.reader.spread.sheets.viewer.editor.R
 import xlsx.reader.spread.sheets.viewer.editor.screen.iap.IapActivity
 import xlsx.reader.spread.sheets.viewer.editor.screen.iap.IapActivityV2
 import xlsx.reader.spread.sheets.viewer.editor.screen.start.RequestAllFilePermissionActivity
-import xlsx.reader.spread.sheets.viewer.editor.screen.start.RequestNotificationPermissionActivity
 
 class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
 
@@ -179,21 +174,12 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
             if (PreferencesUtils.getBoolean(PresKey.GET_START, true)) {
                 logEvent(firebaseAnalytics, "language_first_time_done", "button_action", "done_click")
                // startIntro()
-//                startRequestAllFilePermission()
+                startRequestAllFilePermission()
 //                if (!IAPUtils.isPremium() && BillingProcessor.isIabServiceAvailable(this)) {
 //                    startIAP()
 //                } else {
 //                    startRequestAllFilePermission()
 //                }
-                if(ContextCompat.checkSelfPermission(this,
-                        Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED
-                    && FirebaseRemoteConfigUtil.getInstance().isRequestNotiActivityOnOff()
-                ) {
-                    RequestNotificationPermissionActivity.start(this);
-                }else {
-                    MainActivity.start(this);
-                }
-                finish()
             } else {
                 logEvent(firebaseAnalytics, "language_from_main_done", "button_action", "done_click")
                 setLanguageUpDate(adapter!!.selected)
