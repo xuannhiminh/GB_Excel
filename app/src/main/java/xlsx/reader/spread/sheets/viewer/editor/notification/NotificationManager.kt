@@ -172,13 +172,13 @@ class NotificationManager(private val context: Context) {
         notificationID: Int? = null,
         buttonTitle: String? = null
     ): RemoteViews {
-        val remoteViews = RemoteViews(context.packageName, R.layout.notification_collapsed_custom)
+        val remoteViews = RemoteViews(context.packageName, R.layout.notification_collapsed_custom_2)
         remoteViews.setTextViewText(R.id.text_title, title)
         remoteViews.setTextViewText(R.id.text_content, content)
         buttonTitle?.let { remoteViews.setTextViewText(R.id.button_open, it) }
 
         val fileExtension = filePath?.substringAfterLast(".")
-        val backgroundResource = FILE_EXTENSION_TO_BACKGROUND.getOrDefault(fileExtension, R.drawable.btn_background_red)
+        val backgroundResource = FILE_EXTENSION_TO_BACKGROUND.getOrDefault(fileExtension, R.drawable.btn_background_primary)
         remoteViews.setInt(R.id.button_open, "setBackgroundResource", backgroundResource)
 
         val openAppIntent = Intent(context, SplashActivity::class.java).apply {
@@ -213,7 +213,7 @@ class NotificationManager(private val context: Context) {
         notificationID: Int? = null,
         buttonTitle: String? = null
     ): RemoteViews {
-        val remoteViews = RemoteViews(context.packageName, R.layout.notification_expand_custom)
+        val remoteViews = RemoteViews(context.packageName, R.layout.notification_expand_custom_2)
         remoteViews.setTextViewText(R.id.text_title, title)
         remoteViews.setTextViewText(R.id.text_content, content)
         buttonTitle?.let { remoteViews.setTextViewText(R.id.button_open, buttonTitle) }
@@ -221,7 +221,7 @@ class NotificationManager(private val context: Context) {
         val fileExtension = filePath?.substringAfterLast(".")
         val iconResource = FILE_EXTENSION_TO_ICON.getOrDefault(fileExtension, R.drawable.icon_pdf)
         remoteViews.setImageViewResource(R.id.image_file_icon, iconResource)
-        val backgroundResource = FILE_EXTENSION_TO_BACKGROUND.getOrDefault(fileExtension, R.drawable.btn_background_red)
+        val backgroundResource = FILE_EXTENSION_TO_BACKGROUND.getOrDefault(fileExtension, R.drawable.btn_background_primary)
         remoteViews.setInt(R.id.button_open, "setBackgroundResource", backgroundResource)
 
         val openAppIntent = Intent(context, SplashActivity::class.java).apply {
