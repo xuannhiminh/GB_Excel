@@ -37,6 +37,8 @@ public class Toolbox {
                 return R.drawable.flag_pt;
             case "ru":
                 return R.drawable.flag_ru;
+            case "iw-IL":
+                return R.drawable.flag_he;
             case "tr":
                 return R.drawable.flag_tr;
             case "vi":
