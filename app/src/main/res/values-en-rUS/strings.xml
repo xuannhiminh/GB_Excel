@@ -16,6 +16,12 @@
     <string name="rate_now">Rate now</string>
 
     <string name="recent_add">Recently added</string>
+    <string name="exit_app_content">Are you sure you want to exit the application?</string>
+    <string name="exit_app">😢\nExit</string>
+    <string name="not_exit">🥰\nBack</string>
+    <string name="congrats">Congrats!</string>
+    <string name="congrats_subtext">Welcome to Premium,\n enjoy the benefits</string>
+    <string name="ok_great">Ok, Great!</string>
 
     <string name="all">All</string>
 

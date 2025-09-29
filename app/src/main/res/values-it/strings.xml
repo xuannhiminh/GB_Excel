@@ -34,6 +34,9 @@
     <string name="open">Apri</string>
     <string name="add_in_fav">Aggiungi ai preferiti</string>
     <string name="start_free_trial">Start Free Trial</string>
+    <string name="congrats">Congratulazioni!</string>
+    <string name="congrats_subtext">Benvenuto a Premium,\n goditi i vantaggi</string>
+    <string name="ok_great">Ok, fantastico!</string>
 
     <string name="browse_more_files">Sfoglia altri file</string>
     <string name="cancel">Annulla</string>

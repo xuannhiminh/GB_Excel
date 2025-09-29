@@ -1315,6 +1315,12 @@
             android:name="xlsx.reader.spread.sheets.viewer.editor.screen.iap.IapActivityV2"
             android:exported="true" />
         <activity
+            android:name="xlsx.reader.spread.sheets.viewer.editor.screen.iap.IapActivity"
+            android:exported="true" />
+        <activity
+            android:name="xlsx.reader.spread.sheets.viewer.editor.screen.iap.IapRegistrationSuccessfulActivity"
+            android:exported="true" />
+        <activity
             android:name="xlsx.reader.spread.sheets.viewer.editor.screen.search.FeedBackActivity"
             android:exported="true" />
         <activity

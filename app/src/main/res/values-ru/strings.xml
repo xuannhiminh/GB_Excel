@@ -22,7 +22,9 @@
     <string name="start_free_trial">Start Free Trial</string>
     <string name="set_pdf_reader_as_your_default_excel_file_viewer">Установите <b>%s</b> как программу просмотра файлов Excel по умолчанию</string>
 
-
+    <string name="congrats">Поздравляем!</string>
+    <string name="congrats_subtext">Добро пожаловать в Premium,\n наслаждайтесь преимуществами</string>
+    <string name="ok_great">Хорошо, отлично!</string>
     <string name="add_in_fav">Добавить в избранное</string>
 
     <string name="app_name">Sheets Reader</string>

@@ -23,6 +23,9 @@
 
     <string name="add_in_fav">पसंदीदा में जोड़ें</string>
 
+    <string name="congrats">बधाई हो!</string>
+    <string name="congrats_subtext">प्रीमियम में आपका स्वागत है,\n लाभों का आनंद लें</string>
+    <string name="ok_great">ठीक है, बढ़िया!</string>
     <string name="app_name">Sheets Reader</string>
 
     <string name="browse_more_files">अधिक फ़ाइलें ब्राउज़ करें</string>

@@ -46,6 +46,7 @@ import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 import office.file.ui.MyLibApplication
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
+import xlsx.reader.spread.sheets.viewer.editor.screen.iap.IapActivityV2
 
 
 class PdfApplication: MyLibApplication() {
@@ -58,7 +59,7 @@ class PdfApplication: MyLibApplication() {
     override fun onCreate() {
         super.onCreate()
         AppOpenManager.getInstance().disableAppResumeWithActivity(SplashActivity::class.java)
-        AppOpenManager.getInstance().disableAppResumeWithActivity(IapActivity::class.java)
+        AppOpenManager.getInstance().disableAppResumeWithActivity(IapActivityV2::class.java)
         AppFlyer.getInstance().initAppFlyer(this, getString(R.string.app_flyer_id), true, false, true) // thay
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         PreferencesUtils.init(this)

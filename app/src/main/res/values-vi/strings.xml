@@ -21,7 +21,9 @@
     <string name="start_free_trial">Start Free Trial</string>
     <string name="set_pdf_reader_as_your_default_excel_file_viewer">Đặt <b>%s</b> làm trình xem tệp Excel mặc định của bạn</string>
 
-
+    <string name="congrats">Chúc mừng!</string>
+    <string name="congrats_subtext">Chào mừng đến với Premium,\n hãy tận hưởng các lợi ích</string>
+    <string name="ok_great">Ok, tuyệt vời!</string>
     <string name="add_in_fav">Thêm yêu thích</string>
 
     <string name="app_name">Sheets Reader</string>
