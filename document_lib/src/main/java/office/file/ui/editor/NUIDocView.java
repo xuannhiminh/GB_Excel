@@ -298,6 +298,7 @@ public class NUIDocView extends FrameLayout implements OnClickListener, OnTabCha
     private ImageView mPremiumSmallIcon3;
 
     private ImageView mButtonKeyboard;
+    private ImageView mButtonOutFullScreen;
 
     private LinearLayout mFormulasButton;
     private LinearLayout lnFormulas;
@@ -1378,6 +1379,8 @@ public class NUIDocView extends FrameLayout implements OnClickListener, OnTabCha
 
         mButtonKeyboard = (ImageView) this.createToolbarButton(R.id.button_keyboard);
 
+        mButtonOutFullScreen = (ImageView) this.createToolbarButton(R.id.button_out_full_screen);
+
         try {
             mColorRed.setOnClickListener(this);
 
@@ -1983,6 +1986,10 @@ public class NUIDocView extends FrameLayout implements OnClickListener, OnTabCha
             if (!isFullScreen()) {
                 this.findViewById(R.id.footer).setVisibility(VISIBLE);
             }
+            // Toggle the out-of-fullscreen button visibility based on fullscreen state
+            if (mButtonOutFullScreen != null) {
+                mButtonOutFullScreen.setVisibility(isFullScreen() ? VISIBLE : GONE);
+            }
 
             if (this.isPagesTab()) {
                 this.showPages();
@@ -2001,6 +2008,9 @@ public class NUIDocView extends FrameLayout implements OnClickListener, OnTabCha
         boolean isFullScreen = PreferencesUtils.getBoolean("auto_full_settings_key", false);
         if (isFullScreen) {
             onClick(mFullscreenButton);
+        }
+        if (mButtonOutFullScreen != null) {
+            mButtonOutFullScreen.setVisibility(VISIBLE);
         }
     }
 
@@ -3362,6 +3372,12 @@ public class NUIDocView extends FrameLayout implements OnClickListener, OnTabCha
                     Utilities.showKeyboard(getContext());
                 }
             }
+
+            if (var1 == this.mButtonOutFullScreen) {
+                onFullScreenBack();
+                mFullscreen = false;
+                return;
+            }
         }
     }
 
@@ -3731,6 +3747,9 @@ public class NUIDocView extends FrameLayout implements OnClickListener, OnTabCha
         this.findViewById(R.id.header).setVisibility(GONE);
         this.findViewById(R.id.footer).setVisibility(GONE);
         this.hidePages();
+        if (mButtonOutFullScreen != null) {
+            mButtonOutFullScreen.setVisibility(VISIBLE);
+        }
         this.layoutNow();
     }
 
@@ -3740,6 +3759,9 @@ public class NUIDocView extends FrameLayout implements OnClickListener, OnTabCha
         this.findViewById(R.id.header).setVisibility(VISIBLE);
         this.findViewById(R.id.footer).setVisibility(VISIBLE);
 //        this.showPages();
+        if (mButtonOutFullScreen != null) {
+            mButtonOutFullScreen.setVisibility(GONE);
+        }
         this.layoutNow();
     }
 
