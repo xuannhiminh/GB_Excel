@@ -549,4 +549,6 @@
     <string name="your_feedback">Vos commentaires</string>
    <string name="feedback_disclaimer">En envoyant ce courriel, vous acceptez de partager les informations ci-dessus avec nous pour aider à améliorer l\'application.</string>
     <string name="update_required">Cette version est dépassée. Veuillez mettre à jour l’app</string>
+    <string name="read">Lire</string>
+    <string name="your_recent_PDF_files_are_waiting">Vos fichiers PDF récents vous attendent</string>
 </resources>

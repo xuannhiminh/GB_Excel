@@ -546,5 +546,7 @@
    <string name="feedback_disclaimer">من خلال إرسال هذا البريد الإلكتروني، فإنك توافق على مشاركة المعلومات أعلاه معنا للمساعدة في تحسين التطبيق.</string>
     <string name="start_free_trial">ابدأ التجربة المجانية</string>
     <string name="update_required">هذا الإصدار قديم. يرجى تحديث التطبيق</string>
+    <string name="read">اقرأ</string>
+    <string name="your_recent_PDF_files_are_waiting">ملفات PDF الأخيرة الخاصة بك بانتظارك</string>
 
 </resources>

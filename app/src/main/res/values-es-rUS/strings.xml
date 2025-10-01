@@ -553,4 +553,6 @@
     <string name="your_feedback">Tus comentarios</string>
    <string name="feedback_disclaimer">Al enviar este correo electrónico, aceptas compartir la información anterior con nosotros para ayudar a mejorar la aplicación.</string>
     <string name="update_required">This version is outdated. Please update the app</string>
+    <string name="read">Leer</string>
+    <string name="your_recent_PDF_files_are_waiting">Tus archivos PDF recientes te están esperando</string>
 </resources>
