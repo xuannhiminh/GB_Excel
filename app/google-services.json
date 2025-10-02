@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1087505492337",
+    "project_id": "gb29-sheets-reader-new",
+    "storage_bucket": "gb29-sheets-reader-new.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087505492337:android:4a88f6987638c362c0aed0",
+        "android_client_info": {
+          "package_name": "xlsx.reader.spread.sheets.viewer.editor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9_5VRJBEF0ow0bQUCLhDrYxpTkwKN58A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
