@@ -14,6 +14,7 @@ import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 import xlsx.reader.spread.sheets.viewer.editor.R
 import xlsx.reader.spread.sheets.viewer.editor.adapter.FileItemAdapter
 import xlsx.reader.spread.sheets.viewer.editor.common.FileTab
@@ -75,9 +76,16 @@ class SearchFileActivity : PdfBaseActivity<ActivitySearchFileBinding>() {
 
     override fun initListener() {
         binding.toolbar.ivBack.setOnClickListener {
-            if (!binding.toolbar.edtSearch.getText().isNullOrEmpty())
+            if (!binding.toolbar.edtSearch.getText().isNullOrEmpty()){
                 binding.toolbar.edtSearch.setText("")
-            finish()
+            }
+            if (FirebaseRemoteConfigUtil.getInstance().isShowAdsMain()) {
+                showAdsInterstitial(R.string.inter_createpdf){
+                    finish()
+                }
+            } else {
+                finish()
+            }
         }
 
         binding.toolbar.ivClear.setOnClickListener {

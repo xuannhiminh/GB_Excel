@@ -22,6 +22,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import com.ezteam.baseproject.extensions.launchActivity
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 import com.ezteam.baseproject.utils.IAPUtils
 import com.ezteam.baseproject.utils.PathUtils
 import com.ezteam.baseproject.utils.PreferencesUtils
@@ -428,7 +429,13 @@ class SettingActivity : PdfBaseActivity<ActivitySettingsBinding>() {
         }
 
         binding.ivBack.setOnClickListener {
-            finish()
+            if (FirebaseRemoteConfigUtil.getInstance().isShowAdsMain()) {
+                showAdsInterstitial(R.string.inter_createpdf){
+                    finish()
+                }
+            } else {
+                finish()
+            }
         }
     }
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)

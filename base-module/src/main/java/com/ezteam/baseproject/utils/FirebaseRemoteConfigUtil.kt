@@ -47,6 +47,7 @@ class FirebaseRemoteConfigUtil private constructor() {
         private const val DEFAULT_ALWAYS_ASK_NOTI_WHEN_ENTER_APP = false
         private const val DEFAULT_ALLOW_SAVE_EXCEL_TO_PDF = false
         private const val DEFAULT_LOG_PURCHASE_EVENT = false // 30s
+        private const val DEFAULT_SHOW_ADS_MAIN = true
 
 
 
@@ -86,6 +87,7 @@ class FirebaseRemoteConfigUtil private constructor() {
         private const val REMOTE_KEY_ALWAYS_REQUEST_NOTI_WHEN_ENTER_APP= "always_request_noti_when_enter_app"
         private const val REMOTE_KEY_ALLOW_SAVE_EXCEL_TO_PDF = "allow_save_excel_to_pdf"
         private const val REMOTE_KEY_LOG_PURCHASE_EVENT = "log_purchase_event"
+        private const val REMOTE_KEY_SHOW_ADS_MAIN = "show_ads_main"
 
 
         private var instance: FirebaseRemoteConfigUtil? = null
@@ -141,6 +143,7 @@ class FirebaseRemoteConfigUtil private constructor() {
                 REMOTE_KEY_TURN_OFF_NOTI_SERVICE_IF_PREMIUM to DEFAULT_TURN_OFF_NOTI_SERVICE_IF_PREMIUM,
                 REMOTE_KEY_ALWAYS_REQUEST_NOTI_WHEN_ENTER_APP to DEFAULT_ALWAYS_ASK_NOTI_WHEN_ENTER_APP,
                 REMOTE_KEY_LOG_PURCHASE_EVENT to DEFAULT_LOG_PURCHASE_EVENT,
+                REMOTE_KEY_SHOW_ADS_MAIN to DEFAULT_SHOW_ADS_MAIN,
                 REMOTE_KEY_ALLOW_SAVE_EXCEL_TO_PDF to DEFAULT_ALLOW_SAVE_EXCEL_TO_PDF
 
             )
@@ -267,5 +270,8 @@ class FirebaseRemoteConfigUtil private constructor() {
     }
     fun isLogPurchaseEvent(): Boolean {
         return firebaseRemoteConfig.getBoolean(REMOTE_KEY_LOG_PURCHASE_EVENT)
+    }
+    fun isShowAdsMain(): Boolean {
+        return firebaseRemoteConfig.getBoolean(REMOTE_KEY_SHOW_ADS_MAIN)
     }
 }

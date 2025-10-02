@@ -129,6 +129,7 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
     private val TAG = "MainActivity"
     private val viewModel by inject<MainViewModel>()
     private lateinit var adapter: BasePagerAdapter
+    private var allowShowAdsAt: Long = 0
     private val myBroadcastReceiver: BroadcastSubmodule by lazy {
         BroadcastSubmodule()
     }
@@ -905,28 +906,6 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
         )
     }
 
-//    private fun loadAds() {
-//        binding.toolbar.ivRemoveAds.isVisible = !IAPUtils.getInstance().isPremium
-//        AdmobNativeAdView.getNativeAd(
-//            this,
-//            R.layout.native_admod_home,
-//            object : NativeAdListener() {
-//                override fun onError() {
-//
-//                }
-//
-//                override fun onLoaded(nativeAd: RelativeLayout?) {}
-//
-//                override fun onClickAd() {
-//                }
-//
-//                override fun onPurchased(nativeAd: RelativeLayout?) {
-//                    super.onPurchased(nativeAd)
-//                    binding.toolbar.ivRemoveAds.isVisible = false
-//                }
-//            })
-//    }
-
     override fun onPause() {
         super.onPause()
         handler.removeCallbacks(checkNoDialogToShowReloadGuideRunnable)
@@ -1012,19 +991,17 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
         } else {
             handleSortAction(sortState)
         }
-
-//        binding.toolbar.ivBack.visibility = View.GONE
-//        binding.toolbar.ivFilter.visibility = View.VISIBLE
-//        binding.toolbar.ivCheck.visibility = View.VISIBLE
-//        binding.toolbar.chooseType.visibility = View.VISIBLE
-//        binding.recentlyAddedSection.visibility = View.VISIBLE
-//        binding.toolbar.tvTitle.text = handleAppNameSpannable()
-//        handleUIBaseOnBottomTab(R.id.navigation_home, false)
-//        handleUIBaseOnFileTab(binding.toolbar.tvAll)
-//        viewModel.updateFileTab(FileTab.ALL_FILE)
-//        handleSortAction(4)
     }
-
+    private fun isAllowShowAds(): Boolean {
+        return System.currentTimeMillis() >= allowShowAdsAt
+    }
+    private fun maybeShowAds(interstitialRes: Int, action: () -> Unit) {
+        if (isAllowShowAds()) {
+            showAdsInterstitial(interstitialRes, action)
+        } else {
+            action()
+        }
+    }
     override fun initListener() {
         binding.navView. setOnItemSelectedListener(onNavigationItemSelectedListener)
         binding.toolbar.ivFilter.setOnClickListener {
@@ -1094,37 +1071,53 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
                 BottomTab.HOME -> {
                     binding.recentlyAddedSection.visibility = View.VISIBLE
                     if(viewModel.loadAddedTodayFiles.value != 0) binding.recentlyAddedNumber.visibility = View.VISIBLE else View.GONE
-//                    binding.toolbar.ivSetting.setOnClickListener {
-//                        showMenuFunction()
-//                    }
                     binding.toolbar.ivSetting.setOnClickListener {
-                        SettingActivity.start(this)
+                        if (FirebaseRemoteConfigUtil.getInstance().isShowAdsMain()) {
+                            maybeShowAds(R.string.inter_createpdf) {
+                                SettingActivity.start(this)
+                            }
+                        } else {
+                            SettingActivity.start(this)
+                        }
+                        logEvent("setting_press")
                     }
                 }
                 BottomTab.RECENT -> {
                     binding.recentlyAddedSection.visibility = View.GONE
-//                    binding.toolbar.ivSetting.setOnClickListener {
-//                        showMenuFunction()
-//                    }
                     binding.toolbar.ivSetting.setOnClickListener {
-                        SettingActivity.start(this)
+                        if (FirebaseRemoteConfigUtil.getInstance().isShowAdsMain()) {
+                            maybeShowAds(R.string.inter_createpdf) {
+                                SettingActivity.start(this)
+                            }
+                        } else {
+                            SettingActivity.start(this)
+                        }
+                        logEvent("setting_press")
                     }
                 }
                 BottomTab.FAVORITE -> {
                     binding.recentlyAddedSection.visibility = View.GONE
-//                    binding.toolbar.ivSetting.setOnClickListener {
-//                        showMenuFunction()
-//                    }
                     binding.toolbar.ivSetting.setOnClickListener {
-                        SettingActivity.start(this)
+                        if (FirebaseRemoteConfigUtil.getInstance().isShowAdsMain()) {
+                            maybeShowAds(R.string.inter_createpdf) {
+                                SettingActivity.start(this)
+                            }
+                        } else {
+                            SettingActivity.start(this)
+                        }
+                        logEvent("setting_press")
                     }
                 }
                 else -> {
-//                    binding.toolbar.ivSetting.setOnClickListener {
-//                        showMenuFunction()
-//                    }
                     binding.toolbar.ivSetting.setOnClickListener {
-                        SettingActivity.start(this)
+                        if (FirebaseRemoteConfigUtil.getInstance().isShowAdsMain()) {
+                            maybeShowAds(R.string.inter_createpdf) {
+                                SettingActivity.start(this)
+                            }
+                        } else {
+                            SettingActivity.start(this)
+                        }
+                        logEvent("setting_press")
                     }
                 }
             }
@@ -1134,7 +1127,14 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
         }
 
         binding.toolbar.ivSearch.setOnClickListener {
-            SearchFileActivity.start(this)
+            if (FirebaseRemoteConfigUtil.getInstance().isShowAdsMain()) {
+                maybeShowAds(R.string.inter_createpdf) {
+                    SearchFileActivity.start(this)
+                }
+            } else {
+                SearchFileActivity.start(this)
+            }
+            logEvent("search_press")
         }
 
         binding.buttonCreate.setOnClickListener {
@@ -1188,12 +1188,16 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
                 else -> FileTab.ALL_FILE
             }
 
-            SelectMultipleFilesActivity.start(this, fileTab = fileTab)
+            if (FirebaseRemoteConfigUtil.getInstance().isShowAdsMain()) {
+                maybeShowAds(R.string.inter_createpdf) {
+                    SelectMultipleFilesActivity.start(this, fileTab = fileTab)
+                }
+            } else {
+                SelectMultipleFilesActivity.start(this, fileTab = fileTab)
+            }
+            logEvent("select_mutilfile_press")
         }
 
-//        binding.toolbar.ivRemoveAds.setOnClickListener {
-//            launchActivity<PremiumActivityJava> { }
-//        }
         binding.notificationWarningSection.setOnClickListener {
             requestNotificationPermission()
         }
@@ -1203,14 +1207,6 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
         binding.swipeRefresh.setOnRefreshListener {
             binding.swipeRefresh.isRefreshing = false
             logEvent("refresh_files")
-//            lifecycleScope.launch(Dispatchers.IO) {
-//                if (isAcceptManagerStorage()) {
-//                    viewModel.migrateFileData()
-//                } else {
-//                    viewModel.addSameFilesInternal()
-//                    Log.w("SplashActivity", "Skipping migration, no storage permission")
-//                }
-//            }
             TemporaryStorage.isShowedReloadGuideInThisSession = true // if user refresh files by swipe, not show reload guide anymore
             val intent = Intent(this, ReloadLoadingActivity::class.java)
             startActivity(intent)

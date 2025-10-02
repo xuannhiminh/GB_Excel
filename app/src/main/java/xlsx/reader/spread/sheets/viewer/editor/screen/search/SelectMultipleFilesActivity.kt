@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
+import com.ezteam.baseproject.utils.FirebaseRemoteConfigUtil
 import com.ezteam.baseproject.utils.IAPUtils
 import com.ezteam.baseproject.utils.PDFConstants.Companion.ADS_ITEM_INDEX
 import com.ezteam.baseproject.utils.SystemUtils
@@ -168,7 +169,13 @@ class SelectMultipleFilesActivity : PdfBaseActivity<ActivityCheckFileBinding>() 
 
     override fun initListener() {
         binding.toolbar.ivBack.setOnClickListener {
-            finish()
+            if (FirebaseRemoteConfigUtil.getInstance().isShowAdsMain()) {
+                showAdsInterstitial(R.string.inter_createpdf){
+                    finish()
+                }
+            } else {
+                finish()
+            }
         }
 
         binding.toolbar.ivCheck.setOnClickListener {
