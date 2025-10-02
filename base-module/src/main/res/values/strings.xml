@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Sheets Reader</string>
     <string name="ellipsis">&#8230;</string>
     <string name="no_app_response">No application to perform this action</string>
     <string name="share">Share</string>
