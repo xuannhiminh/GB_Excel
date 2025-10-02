@@ -151,8 +151,8 @@ class SelectMultipleFilesActivity : PdfBaseActivity<ActivityCheckFileBinding>() 
             }
             viewModel.getListFileBaseOnFileTab(fileTab).observe(this@SelectMultipleFilesActivity) {
                 adapter.setList(it)
-//                 if((it.size == 1 || (it.isNotEmpty() &&  !adapter.getList()[ADS_ITEM_INDEX].isAds))) // ads at index 0
-//                     adapter.addAds( FileModel().apply { isAds = true }, ADS_ITEM_INDEX) // ads at index 0
+                 if((it.size == 1 || (it.isNotEmpty() &&  !adapter.getList()[ADS_ITEM_INDEX].isAds))) // ads at index 0
+                     adapter.addAds( FileModel().apply { isAds = true }, ADS_ITEM_INDEX) // ads at index 0
                 adapter.notifyDataSetChanged()
 
                 if (it.isEmpty()) {
