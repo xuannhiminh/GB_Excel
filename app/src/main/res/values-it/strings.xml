@@ -428,6 +428,7 @@
     <string name="trial_conditions">PROVA GRATUITA DI 3 GIORNI, poi %s/Mese (equivalente a %s/anno), rinnovo automatico, annullabile in qualsiasi momento</string>
     <string name="pay_for_renewal">%s/Mese</string>
     <string name="start_free_trial_now">Inizia ora la prova gratuita</string>
+    <string name="leave_the_app">Uscire dall’app?</string>
     <string name="install">Installa</string>
 
     <string name="you_premium">Sei Premium!</string>

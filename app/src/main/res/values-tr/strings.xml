@@ -435,6 +435,7 @@
     <string name="title_description_1">Tüm belge türlerini kolayca açın, görüntüleyin ve düzenleyin</string>
     <string name="restart">Yeniden Başlat</string>
     <string name="skip_language_activity">Atla</string>
+    <string name="leave_the_app">Uygulamadan çıkılsın mı?</string>
     <string name="install">Yükle</string>
     <string name="app_update_install">Güncelleme indirildi. Şimdi yükleyin!</string>
     <string name="app_update_downloaded">🎉Güncelleme indirildi</string>

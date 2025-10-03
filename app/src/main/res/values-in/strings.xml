@@ -442,6 +442,7 @@
     <string name="title_description_1">Buka, lihat, dan edit semua jenis dokumen dengan mudah</string>
     <string name="restart">Mulai Ulang</string>
     <string name="skip_language_activity">Lewati</string>
+    <string name="leave_the_app">Keluar dari aplikasi?</string>
     <string name="install">Pasang</string>
     <string name="app_update_install">Pembaruan telah diunduh. Instal sekarang!</string>
     <string name="app_update_downloaded">🎉Pembaruan telah diunduh</string>

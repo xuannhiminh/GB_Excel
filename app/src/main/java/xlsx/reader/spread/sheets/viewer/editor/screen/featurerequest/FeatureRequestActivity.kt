@@ -78,7 +78,7 @@ class FeatureRequestActivity : PdfBaseActivity<ActivityFeatureRequestBinding>() 
     }
 
     override fun initView() {
-        val backView = binding.root.findViewById<View>(R.id.btn_back)
+        val backView = binding.root.findViewById<View>(R.id.iv_back)
         backView?.setOnClickListener { finish() }
 
         cardIds.forEach { id ->

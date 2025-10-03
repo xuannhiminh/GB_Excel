@@ -434,6 +434,7 @@
     <string name="title_description_1">Abre, visualiza y edita fácilmente todo tipo de documentos</string>
     <string name="restart">Reiniciar</string>
     <string name="skip_language_activity">Saltar</string>
+    <string name="leave_the_app">¿Salir de la app?</string>
     <string name="install">Instalar</string>
     <string name="app_update_install">La actualización se ha descargado. ¡Instálala ahora!</string>
     <string name="app_update_downloaded">🎉La actualización se ha descargado</string>

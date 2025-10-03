@@ -71,6 +71,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.IntentSenderRequest
@@ -114,6 +115,7 @@ import java.io.FileOutputStream
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 import com.ezteam.baseproject.extensions.hasExtraKeyContaining
+import xlsx.reader.spread.sheets.viewer.editor.dialog.ExitAppDialog
 import xlsx.reader.spread.sheets.viewer.editor.screen.iap.IapActivityV2
 import xlsx.reader.spread.sheets.viewer.editor.screen.reloadfile.FeatureRequestActivity
 import xlsx.reader.spread.sheets.viewer.editor.screen.reloadfile.ReloadLoadingActivity
@@ -176,6 +178,16 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
         handleIntentToMove()
         super.onCreate(savedInstanceState)
         handleIntentToShowUI()
+        onBackPressedDispatcher.addCallback(this) {
+            val exitAppDialog = ExitAppDialog()
+            try {
+                exitAppDialog.show(supportFragmentManager, ExitAppDialog::class.java.name)
+                logEvent("exit_app")
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Log.e("MainActivity", "Error showing exit dialog: ${e.message}", e)
+            }
+        }
     }
 
     /*

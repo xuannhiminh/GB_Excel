@@ -19,9 +19,6 @@ import com.nlbn.ads.callback.NativeCallback
 import com.nlbn.ads.util.Admob
 import xlsx.reader.spread.sheets.viewer.editor.R
 import xlsx.reader.spread.sheets.viewer.editor.databinding.ExitAppDialogBinding
-import xlsx.reader.spread.sheets.viewer.editor.databinding.SatisfactionDialogBinding
-import xlsx.reader.spread.sheets.viewer.editor.screen.search.FeedBackActivity
-import xlsx.reader.spread.sheets.viewer.editor.screen.setting.RateUsDialog
 
 class ExitAppDialog : DialogFragment() {
     override fun getTheme(): Int {
@@ -37,10 +34,8 @@ class ExitAppDialog : DialogFragment() {
     private var isAdLoaded = false
 
     private lateinit var firebaseAnalytics: FirebaseAnalytics
-    private fun logEvent(firebaseAnalytic: FirebaseAnalytics, event: String) {
-        firebaseAnalytic.logEvent(event, Bundle().apply {
-            putString("screen", "SatisficationDialog")
-        })
+    private fun logEvent(event: String) {
+        firebaseAnalytics.logEvent(event, Bundle())
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
@@ -70,12 +65,14 @@ class ExitAppDialog : DialogFragment() {
         try {
             firebaseAnalytics = FirebaseAnalytics.getInstance(requireContext())
 
-            binding.btnBack.setOnClickListener {
+            binding.btnOk.setOnClickListener {
+                logEvent("out_app")
+                requireActivity().finishAffinity()
                 dismiss()
             }
 
-            binding.btnExit.setOnClickListener {
-                requireActivity().finishAffinity()
+            binding.btnCancel.setOnClickListener {
+                logEvent("cancel_exit_app")
                 dismiss()
             }
 

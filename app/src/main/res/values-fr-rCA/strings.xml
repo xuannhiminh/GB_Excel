@@ -434,6 +434,7 @@
     <string name="title_description_1">Ouvrez, affichez et modifiez facilement tous les types de documents</string>
     <string name="restart">Redémarrer</string>
     <string name="skip_language_activity">Ignorer</string>
+    <string name="leave_the_app">Quitter l’app ?</string>
     <string name="install">Installer</string>
     <string name="app_update_install">La mise à jour a été téléchargée. Installez-la maintenant !</string>
     <string name="app_update_downloaded">🎉La mise à jour a été téléchargée</string>

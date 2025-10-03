@@ -428,6 +428,7 @@
     <string name="trial_conditions">3 DAGEN GRATIS PROBEREN, daarna %s/maand (gelijk aan %s/jaar), automatisch verlengen, op elk moment opzegbaar</string>
     <string name="pay_for_renewal">%s/maand</string>
     <string name="start_free_trial_now">Start nu je gratis proefperiode</string>
+    <string name="leave_the_app">App verlaten?</string>
     <string name="install">Installeren</string>
 
     <string name="you_premium">Je bent Premium!</string>

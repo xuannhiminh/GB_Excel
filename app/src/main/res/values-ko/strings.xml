@@ -428,6 +428,7 @@
     <string name="trial_conditions">3일 무료 체험 후 %s/월 (%s/년 상당), 자동 갱신, 언제든지 취소 가능</string>
     <string name="pay_for_renewal">%s/월</string>
     <string name="start_free_trial_now">지금 무료 체험 시작하기</string>
+    <string name="leave_the_app">앱을 종료하시겠습니까?</string>
     <string name="install">설치</string>
 
     <string name="you_premium">프리미엄 사용자입니다!</string>

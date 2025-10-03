@@ -450,6 +450,7 @@
     <string name="title_description_1">Dễ dàng mở, xem và chỉnh sửa các loại tài liệu</string>
     <string name="restart">Khởi động lại</string>
     <string name="skip_language_activity">Bỏ qua</string>
+    <string name="leave_the_app">Thoát ứng dụng?</string>
     <string name="install">Cài đặt</string>
     <string name="app_update_install">Bản cập nhật đã được tải xuống. Cài đặt ngay!</string>
     <string name="app_update_downloaded">🎉Bản cập nhật đã được tải xuống</string>

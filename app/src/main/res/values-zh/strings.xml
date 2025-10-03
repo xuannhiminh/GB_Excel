@@ -405,6 +405,7 @@
     <string name="trial_conditions">3天免费试用，之后每月 %s（相当于每年%s），自动续订，可随时取消</string>
     <string name="pay_for_renewal">月 %s</string>
     <string name="start_free_trial_now">立即开始免费试用</string>
+    <string name="leave_the_app">退出应用？</string>
     <string name="install">安装</string>
 
     <string name="you_premium">您是尊贵的 Premium 用户！</string>

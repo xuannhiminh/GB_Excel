@@ -428,6 +428,7 @@
     <string name="trial_conditions">3日間の無料トライアル後、%s/月（%s/年相当）、自動更新、いつでもキャンセル可能</string>
     <string name="pay_for_renewal">%s/月</string>
     <string name="start_free_trial_now">今すぐ無料トライアルを開始</string>
+    <string name="leave_the_app">アプリを終了しますか？</string>
     <string name="install">インストール</string>
 
     <string name="you_premium">あなたはプレミアムユーザーです！</string>

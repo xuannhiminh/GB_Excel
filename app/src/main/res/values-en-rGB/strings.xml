@@ -22,6 +22,8 @@
     <string name="congrats">Congrats!</string>
     <string name="congrats_subtext">Welcome to Premium,\n enjoy the benefits</string>
     <string name="ok_great">Ok, Great!</string>
+    <string name="leave_the_app">Leave the app?</string>
+    <string name="install">Install</string>
 
     <string name="app_name">Sheets Reader</string>
 
