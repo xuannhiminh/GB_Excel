@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bg_notification_card"
     android:orientation="vertical"
+    android:id="@+id/container"
     android:paddingBottom="@dimen/_12sdp"
     android:paddingHorizontal="@dimen/_24sdp"
     android:gravity="center_horizontal">
