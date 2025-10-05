@@ -2010,7 +2010,7 @@ public class NUIDocView extends FrameLayout implements OnClickListener, OnTabCha
             onClick(mFullscreenButton);
         }
         if (mButtonOutFullScreen != null) {
-            mButtonOutFullScreen.setVisibility(VISIBLE);
+            mButtonOutFullScreen.setVisibility(GONE);
         }
     }
 
