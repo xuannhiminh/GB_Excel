@@ -122,10 +122,10 @@ import xlsx.reader.spread.sheets.viewer.editor.screen.reloadfile.ReloadLoadingAc
 
 
 private const val ALL_FILES_FRAGMENT_INDEX = 0
-private const val PDF_FILES_FRAGMENT_INDEX = 1
-private const val WORD_FILES_FRAGMENT_INDEX = 2
-private const val PPT_FILES_FRAGMENT_INDEX = 3
-private const val EXCEL_FILES_FRAGMENT_INDEX = 4
+private const val EXCEL_FILES_FRAGMENT_INDEX = 1
+private const val PDF_FILES_FRAGMENT_INDEX = 2
+private const val WORD_FILES_FRAGMENT_INDEX = 3
+private const val PPT_FILES_FRAGMENT_INDEX = 4
 
 class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
     private val TAG = "MainActivity"
@@ -475,10 +475,10 @@ class MainActivity : PdfBaseActivity<ActivityMainBinding>() {
         binding.toolbar.tvPdf.text =  getString(R.string.pdf)
         adapter = BasePagerAdapter(supportFragmentManager, ALL_FILES_FRAGMENT_INDEX)
         adapter.addFragment(ListAllFileFragment(viewModel.allFilesLiveData), ListAllFileFragment::class.java.name)
+        adapter.addFragment(ListFileExcelFragment(viewModel.excelFilesLiveData), ListFileExcelFragment::class.java.name)
         adapter.addFragment(ListFilePdfFragment(viewModel.pdfFilesLiveData), ListFilePdfFragment::class.java.name)
         adapter.addFragment(ListFileWordFragment(viewModel.wordFilesLiveData), ListFileWordFragment::class.java.name)
         adapter.addFragment(ListFilePPTFragment(viewModel.pptFilesLiveData), ListFilePPTFragment::class.java.name)
-        adapter.addFragment(ListFileExcelFragment(viewModel.excelFilesLiveData), ListFileExcelFragment::class.java.name)
         binding.viewPager.adapter = adapter
         binding.viewPager.offscreenPageLimit = 5
 //        adsCallbackListeners.add(adapter.getItem(ALL_FILES_FRAGMENT_INDEX) as IAdsControl)
